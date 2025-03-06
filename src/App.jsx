@@ -3,10 +3,14 @@ import Portfolio from './pages/Portfolio/Portfolio';
 function App() {
 
   return (
-    <>
-      {/* <Header /> */}
-      <Portfolio />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+
+        {/* <Header /> */}
+        <Portfolio />
+      </Routes>
+    </Router>
   )
 }
 
