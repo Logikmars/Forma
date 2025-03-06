@@ -1,0 +1,81 @@
+.Header{
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    justify-content: space-between;
+    padding: 22px;
+    align-items: center;
+    position: absolute;
+    z-index: 998;
+    &__logo{
+        @media (max-width: 1320px){
+            width: 220px;
+        }
+        @media (max-width: 1110px){
+            width: 200px;
+        }
+        @media (max-width: 400px){
+            width: 150px;
+        }
+    }
+
+
+    &__nav{
+        display: flex;
+        gap: 10px;
+        font-size: 30px;
+        text-transform: uppercase;
+        width: 70%;
+        justify-content: end;
+        @media (max-width: 1460px){
+            font-size: 25px;
+        }
+        @media (max-width: 1240px){
+            font-size: 20px;
+        }
+        &-item{
+            @media (max-width: 1020px){
+                display: none;
+            }
+        }
+        &-burger {
+            display: none;
+
+            @media (max-width: 1020px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                position: relative;
+                z-index: 10;
+                align-items: end;
+
+                span {
+                    display: block;
+                    height: 2px;
+                    width: 100%;
+                    background: white;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        &-burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        &-burger.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        &-burger.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+    }
+
+}
