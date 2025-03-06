@@ -1,12 +1,14 @@
-.PortfolioItemLast{
+.PortfolioItemLast {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
-    &__left{
+
+    &__left {
         width: 35%;
         display: flex;
         flex-wrap: wrap;
-        
+
     }
+
 }
