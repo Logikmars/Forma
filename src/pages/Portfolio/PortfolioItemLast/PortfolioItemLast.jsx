@@ -1,13 +1,13 @@
 import './PortfolioItemLast.scss';
-export default ({ number, title, description, img, subtitle }) => {return (
+export default ({ number, title, description, img, subtitle, orange }) => {return (
     <div className='PortfolioItemLast'>
-        <div className='PortfolioItemLast__left'>
-            <h2 className='PortfolioItemLast__left-num'>{number}</h2>
+        <div className={`PortfolioItemLast__left ${orange ? "PortfolioItemLast__orange" : ""}`}>
+            <h2 className='PortfolioItemLast__left-num bowler_fonts'>{number}</h2>
             <div className='PortfolioItemLast__left-title'>
-                <h2 className='PortfolioItemLast__left-title-big'>{title}</h2>
-                <p className='PortfolioItemLast__left-title-small'>{subtitle}</p>
+                <h2 className='PortfolioItemLast__left-title-big bowler_fonts'>{title}</h2>
+                <p className='PortfolioItemLast__left-title-small bowler_fonts'>{subtitle}</p>
             </div>
-            <p className='PortfolioItemLast__left-description'>{description}</p>
+            <p className='PortfolioItemLast__left-description vogue_fonts'>{description}</p>
         </div>
         <div className='PortfolioItemLast__right'>
             <img src={img} alt="" className='PortfolioItemLast__right-img'/>

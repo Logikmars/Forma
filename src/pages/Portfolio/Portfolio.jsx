@@ -57,7 +57,10 @@ export default () => {return (
             <div className='Portfolio__services'>
                 <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
                 <div className='Portfolio__services-items'>
-                    <PortfolioItemLast number={'01'} title={'cgi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={'(Computer-Generated Imagery)'} />
+                    <PortfolioItemLast number={'01'} title={'cgi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={'(Computer-Generated Imagery)'} orange={true}/>
+                    <PortfolioItemLast number={'02'} title={'motion design'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={''} orange={true}/>
+                    <PortfolioItemLast number={'03'} title={'VFX'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={'(visual effects)'} orange={true}/>
+                    <PortfolioItemLast number={'04'} title={'GFX DESIGN'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={''} orange={true}/>
                 </div>
             </div>
         </div>
