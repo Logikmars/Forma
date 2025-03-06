@@ -1,0 +1,67 @@
+.PortfolioItemBig{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__img{
+        width: 100%;
+        padding-bottom: 16px;
+    }
+    &__info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: 370px){
+            flex-wrap: wrap;
+        }
+        &-top{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            @media (max-width: 760px){
+                width: 50%;
+            }
+            @media (max-width: 620px){
+                align-items: center;
+            }
+            @media (max-width: 520px){
+                flex-wrap: wrap;
+            }
+            @media (max-width: 370px){
+                width: 100%;
+            }
+        }
+        &-title{
+            font-size: 74px;
+            @media (max-width: 760px){
+                font-size: 60px;
+            }
+            @media (max-width: 620px){
+                font-size: 50px;
+            }
+            @media (max-width: 370px){
+                width: 100%;
+            }
+        }
+        &-date{
+            font-size: 10px;
+            border-radius: 4px;
+            border: 1px solid #FFFFFF;
+            padding: 4px;
+        }
+        &-description{
+            width: 30%;
+            font-size: 20px;
+            @media (max-width: 760px){
+                width: 50%;
+            }
+            @media (max-width: 370px){
+                width: 100%;
+            }
+        }
+    }
+}
