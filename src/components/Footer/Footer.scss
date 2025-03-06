@@ -1,0 +1,41 @@
+.Footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    @media (max-width: 500px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__nav{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 44px;
+        font-size: 34px;
+        @media (max-width: 1410px){
+            font-size: 26px;
+            gap: 30px;
+        }
+        @media (max-width: 820px){
+            font-size: 14px;
+            gap: 15px;
+        }
+        @media (max-width: 500px){
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    &__copyright{
+        font-size: 34px;
+        @media (max-width: 1410px){
+            font-size: 26px;
+        }
+        @media (max-width: 820px){
+            font-size: 14px;
+        }
+    }
+}

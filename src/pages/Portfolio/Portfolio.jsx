@@ -1,9 +1,19 @@
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './Portfolio.scss';
 import PortfolioItemBig from './PortfolioItemBig/PortfolioItemBig';
 import PortfolioItemLast from './PortfolioItemLast/PortfolioItemLast';
 import PortfolioItemSmall from './PortfolioItemSmall/PortfolioItemSmall';
-export default () => {return (
+export default () => {
+    
+    const portfolioItems = [
+        { number: '01', title: 'cgi', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false },
+        { number: '02', title: 'motion design', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true },
+        { number: '03', title: 'VFX', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(visual effects)', border: false },
+        { number: '04', title: 'GFX DESIGN', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true }
+    ];
+
+    return (
     <div className='container'> 
         <div className='Portfolio'>
             <Header />
@@ -57,12 +67,20 @@ export default () => {return (
             <div className='Portfolio__services'>
                 <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
                 <div className='Portfolio__services-items'>
-                    <PortfolioItemLast number={'01'} title={'cgi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={'(Computer-Generated Imagery)'} orange={true}/>
-                    <PortfolioItemLast number={'02'} title={'motion design'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={''} orange={true}/>
-                    <PortfolioItemLast number={'03'} title={'VFX'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={'(visual effects)'} orange={true}/>
-                    <PortfolioItemLast number={'04'} title={'GFX DESIGN'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} img={'/img/services.png'} subtitle={''} orange={true}/>
+                    {portfolioItems.map((item, index) => (
+                        <PortfolioItemLast 
+                            key={index}
+                            number={item.number}
+                            title={item.title}
+                            description={item.description}
+                            img={item.img}
+                            subtitle={item.subtitle}
+                            border={item.border}
+                        />
+                    ))}
                 </div>
             </div>
+            <Footer />
         </div>
     </div>
 )}
