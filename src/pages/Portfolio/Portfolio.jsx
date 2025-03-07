@@ -7,6 +7,11 @@ import PortfolioItemLast from './PortfolioItemLast/PortfolioItemLast';
 import PortfolioItemSmall from './PortfolioItemSmall/PortfolioItemSmall';
 import FaqDecor from '../../components/FaqDecor/FaqDecor';
 
+import React, { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
 
@@ -17,6 +22,75 @@ export default () => {
         { number: '04', title: 'GFX DESIGN', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true }
     ];
 
+    const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.utils.toArray(".PortfolioItemSmall").forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          x: index % 2 === 0 ? -100 : 100,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 60%",
+            end: "top 20%",
+            toggleActions: "play none reverse",
+          },
+        }
+      );
+    });
+    gsap.utils.toArray(".PortfolioItemBig").forEach((el, index) => {
+        gsap.fromTo(
+          el,
+          {
+            opacity: 0,
+            x: 0,
+            y: 0
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 50%",
+              end: "top 20%",
+              toggleActions: "play none reverse",
+            },
+          }
+        );
+      });
+      gsap.utils.toArray(".PortfolioItemLast").forEach((el, index) => {
+        gsap.fromTo(
+          el,
+          {
+            opacity: 0,
+            x: index % 2 === 0 ? -100 : 100,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 50%",
+              end: "top 20%",
+              toggleActions: "play none reverse",
+            },
+          }
+        );
+      });
+  }, []);
+  
     return (
         <div className='Portfolio'>
             <div className='Portfolio__hero'>
@@ -46,13 +120,20 @@ export default () => {
                     <h2 className='Portfolio__about-title bowler_fonts'>TITLE TEXT <span className='orange bowler_fonts'>FORMA</span></h2>
                     <p className='Portfolio__about-description vogue_fonts'>Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
-                <div className='Portfolio__portfolio'>
+                <div className='Portfolio__portfolio' ref={containerRef}>
                     <h2 className='bowler_fonts orange Portfolio__portfolio-title'>PORTFOLIO</h2>
                     <div className='Portfolio__portfolio-items'>
                         <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
+                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <div className='Portfolio__portfolio-items'>
+                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    </div>
+                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                 </div>
                 <div className='Portfolio__services'>
                     <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
