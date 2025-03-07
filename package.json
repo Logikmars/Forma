@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-gsap": "^3.2.1",
     "react-router-dom": "^7.3.0",
     "sass": "^1.85.1"
   },
