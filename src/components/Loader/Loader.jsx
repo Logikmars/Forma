@@ -8,7 +8,7 @@ export default ({ showLoader, setshowLoader }) => {
 
     useEffect(() => {
         if (videoRef.current) {
-            // videoRef.current.playbackRate = 10; // Устанавливаем скорость x1.5
+            videoRef.current.playbackRate = 10; // Устанавливаем скорость x1.5
         }
     }, []);
 

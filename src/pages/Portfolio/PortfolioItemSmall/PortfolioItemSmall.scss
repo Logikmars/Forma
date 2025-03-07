@@ -9,6 +9,12 @@
 
     video {
         width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+
+        @media(max-width: 1200px) {
+            max-height: none;
+        }
     }
 
     &__img {

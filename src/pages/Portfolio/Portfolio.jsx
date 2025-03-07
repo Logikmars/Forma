@@ -107,7 +107,7 @@ export default () => {
             <div className='container'>
 
                 <div className='Portfolio__about'>
-                    <div className='Portfolio__about-decor'>
+                    {/* <div className='Portfolio__about-decor'>
                         <div className='Portfolio__about-decor-first free_img Portfolio__about-decor-item Portfolio__about-decor-item_1'>
                             <img src="/img/decor1.webp" alt="" />
                         </div>
@@ -117,7 +117,7 @@ export default () => {
                         <div className='Portfolio__about-decor-third free_img Portfolio__about-decor-item Portfolio__about-decor-item_3'>
                             <img src="/img/decor3.webp" alt="" />
                         </div>
-                    </div>
+                    </div> */}
                     <h2 className='Portfolio__about-title bowler_fonts'>WELCOME TO  <span className='orange bowler_fonts'>FORMA</span></h2>
                     <p className='Portfolio__about-description vogue_fonts'>
                         We are asab production providing services for WEB 3 in the shortest time and excellent quality, we have produced more than 3000 seconds of 3D material so that you can provide the best content to your users.
