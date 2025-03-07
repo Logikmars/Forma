@@ -14,6 +14,7 @@
         &-title {
             font-weight: 700;
             font-size: 34px;
+            transition: color 300ms;
             @media (max-width: 1000px){
                 font-size: 28px;
             }
@@ -27,6 +28,11 @@
             justify-content: center;
             user-select: none;
             align-items: center;
+            transition: color 300ms;
+            transition: border 300ms;
+            &-active{
+                border: 1px solid #CF662F;
+            }
         }
     }
 
@@ -80,6 +86,8 @@
     &-open{
         max-height: 300px;
         opacity: 1;
-        overflow: auto;
+        @media (max-width: 600px){
+            max-width: 600px;
+        }
     }
 }
