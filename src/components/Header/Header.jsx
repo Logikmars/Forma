@@ -13,7 +13,9 @@ export default () => {
     return (
         <>
             <div className='Header'>
-                <img src="/img/logo.svg" alt="" className='Header__logo' />
+                <Link to="/">
+                    <img src="/img/logo.svg" alt="" className='Header__logo' />
+                </Link>
                 <div className='Header__nav bowler_fonts'>
                     <Link to="/" className='bowler_fonts Header__nav-item'>PORTFOLIO</Link>
                     <p className='bowler_fonts Header__nav-item'>/</p>

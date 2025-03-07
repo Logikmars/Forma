@@ -27,12 +27,14 @@ export default () => {
                 el,
                 {
                     opacity: 0,
-                    x: index % 2 === 0 ? -100 : 100,
+                    x: 0,
+                    y: 100
                 },
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 2,
+                    y: 0,
+                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
@@ -54,7 +56,7 @@ export default () => {
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 2,
+                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
@@ -75,7 +77,7 @@ export default () => {
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 2,
+                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,

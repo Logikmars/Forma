@@ -25,59 +25,73 @@
         flex-wrap: wrap;
         padding-top: 80px;
 
-        &-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            cursor: pointer;
-            font-weight: 700;
+        // &-header {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     padding: 15px;
+        //     cursor: pointer;
+        //     font-weight: 700;
 
-            &-title {
-                font-weight: 700;
-            }
+        //     &-title {
+        //         font-weight: 700;
+        //         font-size: 34px;
+        //     }
 
-            &-icon {
-                border: 1px solid #FFF;
-                padding: 0px 5px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                user-select: none;
-                align-items: center;
-            }
-        }
+        //     &-icon {
+        //         border: 1px solid #FFF;
+        //         padding: 0px 5px;
+        //         font-size: 18px;
+        //         display: flex;
+        //         justify-content: center;
+        //         user-select: none;
+        //         align-items: center;
+        //     }
+        // }
 
-        &-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
-            user-select: none;
+        // &-content {
+        //     max-height: 0;
+        //     overflow: hidden;
+        //     transition: max-height 0.4s ease-in-out, opacity 0.3s ease, padding 0.3s ease;
+        //     user-select: none;
 
-            &_inner {
-                user-select: none;
-                padding: 15px;
-                color: white;
-            }
-        }
+        //     &_inner {
+        //         user-select: none;
+        //         padding: 15px;
+        //         color: white;
+        //         font-size: 34px;
+        //     }
+        // }
 
-        &-item {
-            border-bottom: 1px solid #FFF;
-            border-top: 1px solid #FFF;
-            width: 100%;
+        // &-item {
+        //     border-bottom: 1px solid #FFF;
+        //     border-top: 1px solid #FFF;
+        //     width: 100%;
+        //     .FAQ__accordion-header-title{
+        //         color: #FFF;
+        //     }
+        //     .FAQ__accordion-header-icon{
+        //         color: #FFF;
+        //     }
 
-            &.open {
-                .FAQ__accordion-content {
-                    max-height: 300px;
-                    opacity: 1;
-                }
-            }
+        //     &.open {
+        //         .FAQ__accordion-content {
+        //             max-height: 300px;
+        //             opacity: 1;
+        //             .FAQ__accordion-header-title{
+        //                 color: #CF662F;
+        //             }
+        //             .FAQ__accordion-header-icon{
+        //                 color: #CF662F;
+        //             }
+        //         }
+        //     }
 
-            &_inner {
-                width: 100%;
-                max-width: 1000px;
-                margin: 0 auto;
-            }
-        }
+        //     &_inner {
+        //         width: 100%;
+        //         max-width: 1000px;
+        //         margin: 0 auto;
+        //     }
+        // }
     }
 }
