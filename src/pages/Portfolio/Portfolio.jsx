@@ -39,8 +39,8 @@ export default () => {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 60%",
-                        end: "top 60%",
+                        start: "top 80%",
+                        end: "top 80%",
                         scrub: 1,
                     },
                 }
@@ -62,33 +62,33 @@ export default () => {
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 60%",
+                        start: "top 80%",
                         scrub: 1,
-                        end: "top 60%",
+                        end: "top 80%",
                     },
                 }
             );
         });
-        gsap.utils.toArray(".PortfolioItemLast").forEach((el, index) => {
-            gsap.fromTo(
-                el,
-                {
-                    opacity: 0,
-                    x: index % 2 === 0 ? -100 : 100,
-                },
-                {
-                    opacity: 1,
-                    x: 0,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: el,
-                        start: "top 60%",
-                        end: "top 60%",
-                        scrub: 1,
-                    },
-                }
-            );
-        });
+        // gsap.utils.toArray(".PortfolioItemLast").forEach((el, index) => {
+        //     gsap.fromTo(
+        //         el,
+        //         {
+        //             opacity: 0,
+        //             x: index % 2 === 0 ? -100 : 100,
+        //         },
+        //         {
+        //             opacity: 1,
+        //             x: 0,
+        //             ease: "power3.out",
+        //             scrollTrigger: {
+        //                 trigger: el,
+        //                 start: "top 60%",
+        //                 end: "top 60%",
+        //                 scrub: 1,
+        //             },
+        //         }
+        //     );
+        // });
     }, { scope: containerRef })
 
 
@@ -131,12 +131,15 @@ export default () => {
                         <PortfolioItemSmall video={"/videos/paws3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
                     <PortfolioItemBig video={"/videos/paws.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+
+
                     <div className='Portfolio__portfolio-items'>
                         <PortfolioItemSmall video={"/videos/rebalance1.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall video={"/videos/rebalance2.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall video={"/videos/rebalance3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
                     <PortfolioItemBig video={"/videos/rebalance.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+
                     <div className='Portfolio__portfolio-items'>
                         <PortfolioItemSmall video={"/videos/soldatiki1.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall video={"/videos/soldatiki2.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
@@ -144,8 +147,16 @@ export default () => {
                     </div>
                     <PortfolioItemBig video={"/videos/soldatiki.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
 
+
+                    <div className='Portfolio__portfolio-items'>
+                        <PortfolioItemSmall video={"/videos/cheliki1.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/cheliki2.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/cheliki3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    </div>
+                    <PortfolioItemBig video={"/videos/cheliki.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+
                 </div>
-                <div className='Portfolio__services'>
+                {/* <div className='Portfolio__services'>
                     <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
                     <div className='Portfolio__services-items'>
                         {portfolioItems.map((item, index) => (
@@ -160,7 +171,7 @@ export default () => {
                             />
                         ))}
                     </div>
-                </div>
+                </div> */}
                 <Footer />
             </div>
 
