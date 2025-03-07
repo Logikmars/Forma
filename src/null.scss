@@ -165,24 +165,27 @@ img {
     user-select: none;
 }
 
-.container{
+.container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-.bowler_fonts{
+.bowler_fonts {
     font-family: "Bowler";
 }
-.vogue_fonts{
+
+.vogue_fonts {
     font-family: "Vogue";
 }
-.k2_fonts{
+
+.k2_fonts {
     font-family: "K2";
 }
 
-.orange{
+.orange {
     color: #CF662F;
 }
 

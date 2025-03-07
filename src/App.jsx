@@ -12,6 +12,7 @@ function App() {
         <Route path="/case/:caseName" element={<Case />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 

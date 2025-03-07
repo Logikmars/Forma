@@ -1,43 +1,48 @@
-.Header{
+.Header {
     display: flex;
-    width: 100%;
-    max-width: 1600px;
     justify-content: space-between;
     padding: 22px;
     align-items: center;
     position: absolute;
     z-index: 998;
-    &__logo{
-        @media (max-width: 1320px){
+
+    &__logo {
+        @media (max-width: 1320px) {
             width: 220px;
         }
-        @media (max-width: 1110px){
+
+        @media (max-width: 1110px) {
             width: 200px;
         }
-        @media (max-width: 400px){
+
+        @media (max-width: 400px) {
             width: 150px;
         }
     }
 
 
-    &__nav{
+    &__nav {
         display: flex;
         gap: 10px;
         font-size: 30px;
         text-transform: uppercase;
         width: 70%;
         justify-content: end;
-        @media (max-width: 1460px){
+
+        @media (max-width: 1460px) {
             font-size: 25px;
         }
-        @media (max-width: 1240px){
+
+        @media (max-width: 1240px) {
             font-size: 20px;
         }
-        &-item{
-            @media (max-width: 1020px){
+
+        &-item {
+            @media (max-width: 1020px) {
                 display: none;
             }
         }
+
         &-burger {
             display: none;
 

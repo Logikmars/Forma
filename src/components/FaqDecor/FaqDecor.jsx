@@ -21,8 +21,8 @@ export default () => {
                 .fill(0)
                 .map((_, index) => {
                     return <div className='FaqDecor_element free_img' style={{
-                        transform: `translate(${position.x}px, ${position.y}px)`,
-                        transition: `transform ${(elementsCount - index) * 20}ms`
+                        transform: `translate(${position.x}px, ${position.y}px) `,
+                        transition: `transform ${(elementsCount - index) * 20}ms`,
                     }} >
                         <img src="/img/faqDecorElement.svg" alt="" />
                     </div>
