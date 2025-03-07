@@ -10,44 +10,53 @@
         justify-content: center;
         align-items: center;
     }
-    &accordion {
+    &__accordion {
         width: 100%;
+
+    &-item {
+        border-bottom: 1px solid #FFF;
+        border-top: 1px solid #FFF;
+        transition: all 0.3s ease-in-out;
+
+        &.open {
+            .FAQ__accordion-content {
+                max-height: 500px;
+                opacity: 1;
+                padding: 15px;
+            }
+        }
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        font-weight: 700;
         
-        &-item {
-            border-bottom: 1px solid #FFF;
-            border-top: 1px solid #FFF;
-            transition: all 0.3s ease-in-out;
-    
-            &.open {
-                .accordion-content {
-                    display: flex;
-                }
-            }
-        }
-    
-        .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            cursor: pointer;
+        &-title {
             font-weight: 700;
-            
-            .icon {
-                border: 1px solid #FFF;
-                padding: 0px 5px 0px 5px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
         }
-    
-        .accordion-content {
-            display: none;
-            padding: 15px;
-            color: white;
+
+        &-icon {
+            border: 1px solid #FFF;
+            padding: 0px 5px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+    }
+
+    &-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+        color: white;
+    }
     }
 }
 
