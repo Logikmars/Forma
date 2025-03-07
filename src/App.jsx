@@ -6,6 +6,12 @@ import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
 import { useState } from 'react';
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 function App() {
 
   const [showLoader, setshowLoader] = useState(true);
