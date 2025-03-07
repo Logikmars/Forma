@@ -1,0 +1,53 @@
+.FAQ{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__decor{
+        width: 100%;
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &accordion {
+        width: 100%;
+        
+        &-item {
+            border-bottom: 1px solid #FFF;
+            border-top: 1px solid #FFF;
+            transition: all 0.3s ease-in-out;
+    
+            &.open {
+                .accordion-content {
+                    display: flex;
+                }
+            }
+        }
+    
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 700;
+            
+            .icon {
+                border: 1px solid #FFF;
+                padding: 0px 5px 0px 5px;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            color: white;
+        }
+    }
+}
+

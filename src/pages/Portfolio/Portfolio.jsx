@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
+import FAQ from '../FAQ/FAQ';
 import './Portfolio.scss';
 import PortfolioItemBig from './PortfolioItemBig/PortfolioItemBig';
 import PortfolioItemLast from './PortfolioItemLast/PortfolioItemLast';
@@ -81,6 +82,7 @@ export default () => {
                 </div>
             </div>
             <Footer />
+            <FAQ />
         </div>
     </div>
 )}
