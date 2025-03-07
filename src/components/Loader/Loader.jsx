@@ -6,18 +6,17 @@ export default ({ showLoader, setshowLoader }) => {
     const videoRef2 = useRef(null);
     const [canStop, setcanStop] = useState(false);
 
-    useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.playbackRate = 10; // Устанавливаем скорость x1.5
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (videoRef.current) {
+    //     }
+    // }, []);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
 
         const handleTimeUpdate = () => {
-            if (video.duration && video.currentTime >= video.duration - 0.5) {
+            if (video.currentTime >= video.duration - 0.5) {
                 video.pause(); // Ставим паузу за 0.5 секунды до конца
                 setcanStop(true)
             }
@@ -38,7 +37,7 @@ export default ({ showLoader, setshowLoader }) => {
     }, [startHide])
 
     return (
-        <div className={`Loader ${!showLoader && 'Loader_hide'}`} onClick={() => {
+        <div className={`Loader ${canStop && 'Loader_canStop'} ${!showLoader && 'Loader_hide'}`} onClick={() => {
             if (canStop) {
                 setstartHide(true)
             }
