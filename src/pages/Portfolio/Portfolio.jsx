@@ -18,16 +18,19 @@ export default () => {
     ];
 
     return (
-        <div className='container'>
-            <div className='Portfolio'>
-                <Header />
-                <div className='Portfolio__hero'>
-                    <div className='Portfolio__hero-video'>
-                        <video autoPlay muted playsInline loop>
-                            <source src="/utpVideo.mp4" type="video/mp4" />
-                        </video>
+        <div className='Portfolio'>
+            <div className='Portfolio__hero'>
+                <div className='Portfolio__hero-video'>
+                    <video autoPlay muted playsInline loop>
+                        <source src="/utpVideo.mp4" type="video/mp4" />
+                    </video>
+                    <div className='Portfolio__hero_dark free_img'>
+                        <div className='Portfolio__hero_dark_inner'></div>
                     </div>
                 </div>
+            </div>
+            <div className='container'>
+
                 <div className='Portfolio__about'>
                     <div className='Portfolio__about-decor'>
                         <div className='Portfolio__about-decor-first free_img Portfolio__about-decor-item Portfolio__about-decor-item_1'>
@@ -50,20 +53,6 @@ export default () => {
                         <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                         <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
-                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    </div>
-                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    </div>
-                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    <div className='Portfolio__portfolio-items'></div>
                 </div>
                 <div className='Portfolio__services'>
                     <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
@@ -83,6 +72,7 @@ export default () => {
                 </div>
                 <Footer />
             </div>
-        </div >
+
+        </div>
     )
 }

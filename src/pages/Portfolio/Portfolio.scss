@@ -17,6 +17,17 @@
         flex-wrap: wrap;
         align-content: space-between;
 
+        &_dark {
+            width: 100% !important;
+            align-items: end !important;
+
+            &_inner {
+                min-height: 100px;
+                width: 100%;
+                background: linear-gradient(to top, #000, #0000)
+            }
+        }
+
         &-video {
             position: relative;
             height: 100vh;
@@ -27,9 +38,16 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            align-content: center;
+            // box-shadow: inset 0px 0px 100px red;
 
             video {
-                width: 100%;
+                width: 100vw;
+
+                // max-height: 100vh;
+                @media(max-width: 800px) {
+                    width: 150vw;
+                }
             }
         }
 
@@ -50,11 +68,13 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        align-content: center;
         justify-content: center;
         gap: 42px;
+        min-height: 50vh;
 
         &-title {
-            padding-top: 172px;
+            // padding-top: 172px;
             font-size: 90px;
             text-align: center;
             padding-left: 10px;
@@ -68,7 +88,6 @@
         &-description {
             font-size: 20px;
             text-align: center;
-            padding-bottom: 86px;
             padding-left: 10px;
             padding-right: 10px;
 
@@ -181,6 +200,7 @@
         padding: 16px;
         flex-wrap: wrap;
         padding-bottom: 140px;
+        margin-top: 120px;
 
         &-title {
             text-transform: uppercase;

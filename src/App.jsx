@@ -2,10 +2,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Portfolio from './pages/Portfolio/Portfolio';
 import FAQ from './pages/FAQ/FAQ';
 import Case from './pages/Case/Case';
+import Header from './components/Header/Header';
+import Loader from './components/Loader/Loader';
 
 function App() {
   return (
     <BrowserRouter>
+      <Loader />
+      <Header />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/FAQ" element={<FAQ />} />

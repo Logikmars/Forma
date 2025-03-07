@@ -2,6 +2,7 @@ import './FAQ.scss';
 import Header from '../../components/Header/Header';
 import { useState } from "react";
 import FaqDecor from '../../components/FaqDecor/FaqDecor';
+import Footer from '../../components/Footer/Footer';
 
 const questions = [
     { id: 1, question: "YOUR QUESTION", answer: "Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." },
@@ -21,10 +22,7 @@ export default () => {
     return (
 
         <div className='FAQ'>
-            <Header />
-            <div className='FAQ__decor'>
-                <FaqDecor />
-            </div>
+            <FaqDecor />
             <div className="FAQ__accordion">
                 {questions.map((item, index) => (
                     <div key={item.id} className={`FAQ__accordion-item ${openIndex === index ? "open" : ""}`}>
@@ -43,6 +41,7 @@ export default () => {
                     </div>
                 ))}
             </div>
+            <Footer />
         </div>
     )
 }
