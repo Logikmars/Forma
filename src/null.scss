@@ -170,8 +170,11 @@ img {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
     margin: 0 auto;
+
+    @media(min-width: 1400px) {
+        max-width: calc(90%);
+    }
 }
 
 .bowler_fonts {
