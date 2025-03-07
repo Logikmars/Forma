@@ -27,20 +27,21 @@ export default () => {
                 el,
                 {
                     opacity: 0,
-                    x: 0,
-                    y: 100
+                    x: 100 * ((index % 2) ? 1 : -1),
+                    y: 200,
+                    rotate: `${20 * ((index % 2) ? 1 : -1)}deg`,
                 },
                 {
                     opacity: 1,
+                    rotate: `0deg`,
                     x: 0,
                     y: 0,
-                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
                         start: "top 60%",
-                        end: "top 20%",
-                        toggleActions: "play none reverse",
+                        end: "top 60%",
+                        scrub: 1,
                     },
                 }
             );
@@ -50,19 +51,20 @@ export default () => {
                 el,
                 {
                     opacity: 0,
-                    x: 0,
-                    y: 0
+                    x: 100 * ((index % 2) ? 1 : -1),
+                    y: 200,
                 },
                 {
                     opacity: 1,
+                    rotate: `0deg`,
+                    y: 0,
                     x: 0,
-                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 50%",
-                        end: "top 20%",
-                        toggleActions: "play none reverse",
+                        start: "top 60%",
+                        scrub: 1,
+                        end: "top 60%",
                     },
                 }
             );
@@ -77,13 +79,12 @@ export default () => {
                 {
                     opacity: 1,
                     x: 0,
-                    duration: 1,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 50%",
-                        end: "top 20%",
-                        toggleActions: "play none reverse",
+                        start: "top 60%",
+                        end: "top 60%",
+                        scrub: 1,
                     },
                 }
             );
