@@ -118,7 +118,7 @@ export default () => {
                             <img src="/img/decor3.webp" alt="" />
                         </div>
                     </div>
-                    <h2 className='Portfolio__about-title bowler_fonts'>TITLE TEXT <span className='orange bowler_fonts'>FORMA</span></h2>
+                    <h2 className='Portfolio__about-title bowler_fonts'>WELCOME TO  <span className='orange bowler_fonts'>FORMA</span></h2>
                     <p className='Portfolio__about-description vogue_fonts'>
                         We are asab production providing services for WEB 3 in the shortest time and excellent quality, we have produced more than 3000 seconds of 3D material so that you can provide the best content to your users.
                     </p>
@@ -131,12 +131,19 @@ export default () => {
                         <PortfolioItemSmall video={"/videos/paws3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
                     <PortfolioItemBig video={"/videos/paws.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                    {/* <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
-                        <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <div className='Portfolio__portfolio-items'>
+                        <PortfolioItemSmall video={"/videos/rebalance1.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/rebalance2.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/rebalance3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
                     </div>
-                    <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} /> */}
+                    <PortfolioItemBig video={"/videos/rebalance.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <div className='Portfolio__portfolio-items'>
+                        <PortfolioItemSmall video={"/videos/soldatiki1.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/soldatiki2.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                        <PortfolioItemSmall video={"/videos/soldatiki3.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    </div>
+                    <PortfolioItemBig video={"/videos/soldatiki.mp4"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+
                 </div>
                 <div className='Portfolio__services'>
                     <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
