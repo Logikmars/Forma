@@ -1,14 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Portfolio from './pages/Portfolio/Portfolio';
-import Faq from './pages/Faq/Faq';
+import FAQ from './pages/FAQ/FAQ';
+import Case from './pages/Case/Case';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Portfolio />} />
-        <Route path="/faq" element={<Faq />} />
-
+        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/case/:caseName" element={<Case />} />
       </Routes>
     </BrowserRouter>
   );

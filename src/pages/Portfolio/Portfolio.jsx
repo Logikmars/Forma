@@ -1,5 +1,6 @@
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
+import FAQ from '../FAQ/FAQ';
 import './Portfolio.scss';
 import PortfolioItemBig from './PortfolioItemBig/PortfolioItemBig';
 import PortfolioItemLast from './PortfolioItemLast/PortfolioItemLast';
@@ -18,9 +19,6 @@ export default () => {
 
     return (
         <div className='container'>
-            <div className='Portfolio_faqWrapper'>
-                <FaqDecor />
-            </div>
 
             <div className='Portfolio'>
                 <Header />
@@ -89,6 +87,46 @@ export default () => {
                 </div>
                 <Footer />
             </div>
+            <div className='Portfolio__portfolio'>
+                <h2 className='bowler_fonts orange Portfolio__portfolio-title'>PORTFOLIO</h2>
+                <div className='Portfolio__portfolio-items'>
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                </div>
+                <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                <div className='Portfolio__portfolio-items'>
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                </div>
+                <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                <div className='Portfolio__portfolio-items'>
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                    <PortfolioItemSmall img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                </div>
+                <PortfolioItemBig img={"/img/example.png"} title={'NAME OF WORK'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} />
+                <div className='Portfolio__portfolio-items'></div>
+            </div>
+            <div className='Portfolio__services'>
+                <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
+                <div className='Portfolio__services-items'>
+                    {portfolioItems.map((item, index) => (
+                        <PortfolioItemLast
+                            key={index}
+                            number={item.number}
+                            title={item.title}
+                            description={item.description}
+                            img={item.img}
+                            subtitle={item.subtitle}
+                            border={item.border}
+                        />
+                    ))}
+                </div>
+            </div>
+            <Footer />
+            <FAQ />
         </div>
     )
 }
