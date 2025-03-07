@@ -1,16 +1,23 @@
-.Portfolio{
+.Portfolio {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    &__hero{
+
+    &_faqWrapper {
+        width: 100%;
+        height: 500px;
+    }
+
+    &__hero {
         position: relative;
         height: 100vh;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
-        &-video{
+
+        &-video {
             position: relative;
             height: 100vh;
             width: 100%;
@@ -21,107 +28,129 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        &-logo{
+
+        &-logo {
             position: relative;
             z-index: 1000;
             width: 100% !important;
             align-items: flex-end !important;
-            &-img{
+
+            &-img {
                 width: 100%;
             }
         }
     }
-    &__about{
+
+    &__about {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 42px;
-        &-title{
+
+        &-title {
             padding-top: 172px;
             font-size: 90px;
             text-align: center;
             padding-left: 10px;
             padding-right: 10px;
-            @media (max-width: 410px){
+
+            @media (max-width: 410px) {
                 font-size: 70px;
             }
         }
-        &-description{
+
+        &-description {
             font-size: 20px;
             text-align: center;
             padding-bottom: 86px;
             padding-left: 10px;
             padding-right: 10px;
-            @media (max-width: 970px){
+
+            @media (max-width: 970px) {
                 padding-bottom: 0px;
             }
-            @media (max-width: 410px){
+
+            @media (max-width: 410px) {
                 font-size: 16px;
             }
         }
-        &-decor{
+
+        &-decor {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &-item{
+
+            &-item {
                 width: 33% !important;
                 align-items: flex-end !important;
                 z-index: -1;
-                @media (max-width: 800px){
+
+                @media (max-width: 800px) {
                     bottom: 200px;
                 }
-                img{
+
+                img {
                     opacity: .4;
                     width: 100%;
                 }
             }
         }
     }
-    &__portfolio{
+
+    &__portfolio {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         padding: 0px 20px 0px 20px;
-        &-title{
+
+        &-title {
             font-size: 90px;
             width: 100%;
             text-align: left;
-            @media (max-width: 620px){
+
+            @media (max-width: 620px) {
                 font-size: 60px;
             }
-            @media (max-width: 420px){
+
+            @media (max-width: 420px) {
                 font-size: 40px;
             }
         }
-        &-items{
+
+        &-items {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            @media (max-width: 520px){
+
+            @media (max-width: 520px) {
                 flex-wrap: wrap;
             }
         }
     }
-    &__services{
+
+    &__services {
         width: 100%;
         display: flex;
         padding: 16px;
         flex-wrap: wrap;
         padding-bottom: 140px;
-        &-title{
+
+        &-title {
             text-transform: uppercase;
             font-size: 90px;
             padding-bottom: 32px;
-            @media (max-width: 550px){
+
+            @media (max-width: 550px) {
                 font-size: 50px;
             }
         }
-        &-items{
+
+        &-items {
             width: 100%;
             display: flex;
             flex-wrap: wrap;

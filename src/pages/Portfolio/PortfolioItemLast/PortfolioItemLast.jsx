@@ -11,9 +11,11 @@ export default ({ number, title, description, img, subtitle, border }) => {
                         <img src="/img/ourServicesCornerFill.svg" alt="" />
                     )}
                 </div>
+                <div className='PortfolioItemLast__left-top-block free_img'>
+                    <div className={`PortfolioItemLast__left-top-inner ${border ? "" : "PortfolioItemLast__orange"}`}></div>
+                </div>
                 <div className='PortfolioItemLast__left-top'>
                     <h2 className='PortfolioItemLast__left-num bowler_fonts'>{number}</h2>
-                    <div className={`PortfolioItemLast__left-top-inner ${border ? "" : "PortfolioItemLast__orange"}`}></div>
                 </div>
                 <div className={`PortfolioItemLast__left-bottom ${border ? "" : "PortfolioItemLast__orange"}`}>
                     <div className='PortfolioItemLast__left-title'>
@@ -24,7 +26,7 @@ export default ({ number, title, description, img, subtitle, border }) => {
                 </div>
             </div>
             <div className='PortfolioItemLast__right'>
-                <img src={img} alt="" className='PortfolioItemLast__right-img'/>
+                <img src={img} alt="" className='PortfolioItemLast__right-img' />
             </div>
         </div>
     )
