@@ -10,11 +10,11 @@ import FaqDecor from '../../components/FaqDecor/FaqDecor';
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
-
     const portfolioItems = [
         { number: '01', title: 'cgi', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false },
         { number: '02', title: 'motion design', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true },
@@ -23,74 +23,74 @@ export default () => {
     ];
 
     const containerRef = useRef(null);
+    useGSAP(() => {
+        gsap.utils.toArray(".PortfolioItemSmall").forEach((el, index) => {
+            gsap.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    x: index % 2 === 0 ? -100 : 100,
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 60%",
+                        end: "top 20%",
+                        toggleActions: "play none reverse",
+                    },
+                }
+            );
+        });
+        gsap.utils.toArray(".PortfolioItemBig").forEach((el, index) => {
+            gsap.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    x: 0,
+                    y: 0
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 50%",
+                        end: "top 20%",
+                        toggleActions: "play none reverse",
+                    },
+                }
+            );
+        });
+        gsap.utils.toArray(".PortfolioItemLast").forEach((el, index) => {
+            gsap.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    x: index % 2 === 0 ? -100 : 100,
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 50%",
+                        end: "top 20%",
+                        toggleActions: "play none reverse",
+                    },
+                }
+            );
+        });
+    }, { scope: containerRef })
 
-  useLayoutEffect(() => {
-    gsap.utils.toArray(".PortfolioItemSmall").forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        {
-          opacity: 0,
-          x: index % 2 === 0 ? -100 : 100,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 60%",
-            end: "top 20%",
-            toggleActions: "play none reverse",
-          },
-        }
-      );
-    });
-    gsap.utils.toArray(".PortfolioItemBig").forEach((el, index) => {
-        gsap.fromTo(
-          el,
-          {
-            opacity: 0,
-            x: 0,
-            y: 0
-          },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 50%",
-              end: "top 20%",
-              toggleActions: "play none reverse",
-            },
-          }
-        );
-      });
-      gsap.utils.toArray(".PortfolioItemLast").forEach((el, index) => {
-        gsap.fromTo(
-          el,
-          {
-            opacity: 0,
-            x: index % 2 === 0 ? -100 : 100,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 50%",
-              end: "top 20%",
-              toggleActions: "play none reverse",
-            },
-          }
-        );
-      });
-  }, []);
-  
+
     return (
         <div className='Portfolio'>
             <div className='Portfolio__hero'>
