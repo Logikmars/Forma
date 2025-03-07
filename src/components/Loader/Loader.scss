@@ -22,11 +22,6 @@
         cursor: pointer;
         transition: scale 200ms, filter 200ms;
 
-        &:hover {
-            filter: brightness(1.2);
-            scale: 1.2;
-        }
-
     }
 
     &_hide {

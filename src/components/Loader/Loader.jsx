@@ -16,7 +16,7 @@ export default ({ showLoader, setshowLoader }) => {
         if (!video) return;
 
         const handleTimeUpdate = () => {
-            if (video.currentTime >= video.duration - 0.5) {
+            if (video.currentTime >= video.duration - 1) {
                 video.pause(); // Ставим паузу за 0.5 секунды до конца
                 setcanStop(true)
             }
