@@ -16,6 +16,7 @@
             font-size: 34px;
 
             @media (max-width: 1000px) {
+                transition: color 300ms;
                 font-size: 28px;
             }
         }
@@ -28,6 +29,12 @@
             justify-content: center;
             user-select: none;
             align-items: center;
+            transition: color 300ms;
+            transition: border 300ms;
+
+            &-active {
+                border: 1px solid #CF662F;
+            }
         }
     }
 
@@ -85,7 +92,6 @@
         max-height: 300px;
         opacity: 1;
 
-        // overflow: auto;
         @media(max-width: 600px) {
             max-height: 600px;
         }

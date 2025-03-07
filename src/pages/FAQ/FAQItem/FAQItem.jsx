@@ -11,7 +11,7 @@ export default ({ question, answer, toggleAccordion}) => {
         <div className='FAQItem-item_inner'>
             <div className="FAQItem-header" onClick={() => setoppened(!oppened)}>
                 <span className={`k2_fonts FAQItem-header-title ${oppened ? "opentitle" : ""}`}>{question}</span>
-                <span className={`FAQItem-header-icon ${oppened ? "opentitle" : ""}`}> {oppened ? "−" : "+"}</span>
+                <span className={`FAQItem-header-icon ${oppened ? "opentitle FAQItem-header-icon-active " : ""}`}> {oppened ? "−" : "+"}</span>
             </div>
             <div className={`FAQItem-content ${oppened ? "FAQItem-content-open" : ""}`}>
                 <div className='FAQItem-content_inner k2_fonts'>
