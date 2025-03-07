@@ -45,8 +45,9 @@
                 width: 100vw;
 
                 // max-height: 100vh;
-                @media(max-width: 800px) {
-                    width: 150vw;
+                @media(max-width: 1400px) {
+                    height: 70vh;
+                    object-fit: cover;
                 }
             }
         }

@@ -4,17 +4,25 @@ import FAQ from './pages/FAQ/FAQ';
 import Case from './pages/Case/Case';
 import Header from './components/Header/Header';
 import Loader from './components/Loader/Loader';
+import { useState } from 'react';
 
 function App() {
+
+  const [showLoader, setshowLoader] = useState(true);
+
   return (
     <BrowserRouter>
-      <Loader />
       <Header />
-      <Routes>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/FAQ" element={<FAQ />} />
-        <Route path="/case/:caseName" element={<Case />} />
-      </Routes>
+      <div className='App' style={{
+        maxHeight: showLoader ? '100vh' : 'none',
+      }}>
+        <Loader showLoader={showLoader} setshowLoader={setshowLoader} />
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/case/:caseName" element={<Case />} />
+        </Routes>
+      </div>
     </BrowserRouter>
 
   );

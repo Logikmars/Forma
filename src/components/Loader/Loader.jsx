@@ -1,8 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import './Loader.scss';
-export default () => {
+export default ({ showLoader, setshowLoader }) => {
+
     const videoRef = useRef(null);
+    const videoRef2 = useRef(null);
     const [canStop, setcanStop] = useState(false);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 10; // Устанавливаем скорость x1.5
+        }
+    }, []);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -18,16 +26,38 @@ export default () => {
         video.addEventListener("timeupdate", handleTimeUpdate);
         return () => video.removeEventListener("timeupdate", handleTimeUpdate);
     }, []);
-    const [hide, sethide] = useState(false);
+    const [startHide, setstartHide] = useState(false);
 
+    useEffect(() => {
+        if (startHide) {
+            videoRef2.current.play()
+            setTimeout(() => {
+                setshowLoader(false)
+            }, 1000);
+        }
+    }, [startHide])
 
     return (
-        <div className={`Loader ${canStop && 'Loader_canStop'} ${hide && 'Loader_hide'}`} onClick={() => {
-            sethide(true)
+        <div className={`Loader ${!showLoader && 'Loader_hide'}`} onClick={() => {
+            if (canStop) {
+                setstartHide(true)
+            }
         }}>
-            <video ref={videoRef} autoPlay muted playsInline >
-                <source src="/loader.mp4" type="video/mp4" />
-            </video>
+
+            <div className='Loader_content free_img'>
+                <video ref={videoRef} autoPlay muted playsInline >
+                    <source src="/loader.mp4" type="video/mp4" />
+                </video>
+            </div>
+
+            <div className={`Loader_content Loader_content_2 free_img`} style={{
+                opacity: startHide ? 1 : 0
+            }}>
+                <video ref={videoRef2} muted playsInline >
+                    <source src="/loaderEnd.mp4" type="video/mp4" />
+                </video>
+            </div>
+
         </div>
     )
 }
