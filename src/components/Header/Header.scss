@@ -46,9 +46,18 @@
 
         &-item {
             text-shadow: 0px 0px 8px #000;
+            transition: color 200ms;
 
             @media (max-width: 1020px) {
                 display: none;
+            }
+
+            &:hover {
+                color: #CF662F;
+            }
+
+            &_separator {
+                pointer-events: none;
             }
         }
 

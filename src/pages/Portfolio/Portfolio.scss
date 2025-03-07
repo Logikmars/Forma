@@ -112,6 +112,7 @@
                 width: 33% !important;
                 align-items: flex-start !important;
                 z-index: -1;
+                top: -100px;
 
                 img {
                     opacity: .4;
@@ -119,7 +120,7 @@
                 }
 
                 &_1 {
-                    animation: glist1 25s infinite alternate ease-in-out;
+                    // animation: glist1 25s infinite alternate ease-in-out;
 
                     @keyframes glist1 {
                         0% {
@@ -133,7 +134,7 @@
                 }
 
                 &_2 {
-                    animation: glist2 18s infinite alternate ease-in-out;
+                    // animation: glist2 18s infinite alternate ease-in-out;
 
                     @keyframes glist2 {
                         0% {
@@ -147,7 +148,7 @@
                 }
 
                 &_3 {
-                    animation: glist3 30s infinite alternate ease-in-out;
+                    // animation: glist3 30s infinite alternate ease-in-out;
 
                     @keyframes glist3 {
                         0% {

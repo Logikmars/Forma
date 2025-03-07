@@ -18,13 +18,13 @@ export default () => {
                 </Link>
                 <div className='Header__nav bowler_fonts'>
                     <Link to="/" className='bowler_fonts Header__nav-item'>PORTFOLIO</Link>
-                    <p className='bowler_fonts Header__nav-item'>/</p>
+                    <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     {/* <Link to="/about" className='bowler_fonts Header__nav-item'> Our sevices</Link> */}
                     {/* <p className='bowler_fonts Header__nav-item'>/</p> */}
                     <a href="#contactUs" className='bowler_fonts Header__nav-item'>CONTACT US</a>
-                    <p className='bowler_fonts Header__nav-item'>/</p>
+                    <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     <Link to="/faq" className='bowler_fonts Header__nav-item'>FAQ</Link>
-                    <p className='bowler_fonts Header__nav-item'>/</p>
+                    <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     <a href="#socials" className='bowler_fonts Header__nav-item'>SOCIALS</a>
                     <div className={`Header__nav-burger ${isMobileMenuOpen ? "active" : ""}`}
                         onClick={toggleModal}>
