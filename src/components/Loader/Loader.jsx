@@ -6,17 +6,18 @@ export default ({ showLoader, setshowLoader }) => {
     const videoRef2 = useRef(null);
     const [canStop, setcanStop] = useState(false);
 
-    // useEffect(() => {
-    //     if (videoRef.current) {
-    //     }
-    // }, []);
+    useEffect(() => {
+        if (videoRef.current) {
+            // videoRef.current.playbackRate = 10
+        }
+    }, []);
 
     useEffect(() => {
         const video = videoRef.current;
         if (!video) return;
 
         const handleTimeUpdate = () => {
-            if (video.currentTime >= video.duration - 1) {
+            if (video.currentTime >= video.duration - 2.5) {
                 video.pause(); // Ставим паузу за 0.5 секунды до конца
                 setcanStop(true)
             }
