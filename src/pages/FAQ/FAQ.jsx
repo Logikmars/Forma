@@ -22,7 +22,7 @@ export default () => {
 
     return (
 
-        <div className='FAQ'>
+        <div className='FAQ' id='FAQ'>
             <FaqDecor />
             <div className="FAQ__accordion">
                 {questions.map((item, index) => (
