@@ -83,8 +83,7 @@ export default () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const landscapeVideo = "/utpVideo.mp4";
-    const portraitVideo = "/utpVideoMobile.mp4";
+    const videoSrc = isLandscape ? "/utpVideo.mp4" : "/utpVideoMobile.mp4";
 
 
 
@@ -92,8 +91,8 @@ export default () => {
         <div className='Portfolio'>
             <div className='Portfolio__hero'>
                 <div className='Portfolio__hero-video'>
-                    <video autoPlay muted playsInline loop>
-                        <source src={isLandscape ? landscapeVideo : portraitVideo} type="video/mp4" />
+                    <video key={videoSrc} autoPlay muted playsInline loop>
+                        <source src={videoSrc} type="video/mp4" />
                     </video>
                     <div className='Portfolio__hero_scroll free_img'>
                         <div className='Portfolio__hero_scroll_inner'>
