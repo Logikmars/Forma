@@ -90,26 +90,26 @@ export default () => {
     return (
         <div className='Portfolio'>
             <div className='Portfolio__hero'>
+                <div className='Portfolio__hero_scroll free_img'>
+                    <div className='Portfolio__hero_scroll_inner'>
+                        <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_1 free_img'>
+                            <img src="/img/arrowDown.svg" alt="" />
+                        </div>
+                        <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_2 free_img'>
+                            <img src="/img/arrowDown.svg" alt="" />
+                        </div>
+                        <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_3 free_img'>
+                            <img src="/img/arrowDown.svg" alt="" />
+                        </div>
+                        <div className='Portfolio__hero_scroll_text bowler_fonts'>
+                            SCROLL DOWN
+                        </div>
+                    </div>
+                </div>
                 <div className='Portfolio__hero-video'>
                     <video key={videoSrc} autoPlay muted playsInline loop>
                         <source src={videoSrc} type="video/mp4" />
                     </video>
-                    <div className='Portfolio__hero_scroll free_img'>
-                        <div className='Portfolio__hero_scroll_inner'>
-                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_1 free_img'>
-                                <img src="/img/arrowDown.svg" alt="" />
-                            </div>
-                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_2 free_img'>
-                                <img src="/img/arrowDown.svg" alt="" />
-                            </div>
-                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_3 free_img'>
-                                <img src="/img/arrowDown.svg" alt="" />
-                            </div>
-                            <div className='Portfolio__hero_scroll_text bowler_fonts'>
-                                SCROLL DOWN
-                            </div>
-                        </div>
-                    </div>
                     <div className='Portfolio__hero_dark free_img'>
                         <div className='Portfolio__hero_dark_inner'></div>
                     </div>
@@ -134,7 +134,7 @@ export default () => {
                         We are asab production providing services for WEB 3 in the shortest time and excellent quality, we have produced more than 3000 seconds of 3D material so that you can provide the best content to your users.
                     </p>
                 </div>
-                <div className='Portfolio__portfolio' ref={containerRef}>
+                <div className='Portfolio__portfolio' ref={containerRef} id='portfolio'>
                     <h2 className='bowler_fonts orange Portfolio__portfolio-title'>PORTFOLIO</h2>
                     <div className='Portfolio__portfolio-items'>
                         <PortfolioItemSmall video={"/videos/paws1.mp4"} title={'Trump sundog'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'} />

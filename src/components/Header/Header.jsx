@@ -17,7 +17,7 @@ export default () => {
                     <img src="/img/logo.svg" alt="" className='Header__logo' />
                 </Link>
                 <div className='Header__nav bowler_fonts'>
-                    <Link to="/" className='bowler_fonts Header__nav-item'>PORTFOLIO</Link>
+                    <a href="#portfolio" className='bowler_fonts Header__nav-item'>PORTFOLIO</a>
                     <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     {/* <Link to="/about" className='bowler_fonts Header__nav-item'> Our sevices</Link> */}
                     {/* <p className='bowler_fonts Header__nav-item'>/</p> */}
