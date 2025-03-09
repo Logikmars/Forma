@@ -7,11 +7,12 @@ import PortfolioItemLast from './PortfolioItemLast/PortfolioItemLast';
 import PortfolioItemSmall from './PortfolioItemSmall/PortfolioItemSmall';
 import FaqDecor from '../../components/FaqDecor/FaqDecor';
 
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 import Trusted from '../../components/Trusted/Trusted';
+import { useState } from 'react';
 
 export default () => {
     const portfolioItems = [
@@ -73,13 +74,26 @@ export default () => {
 
     }, { scope: containerRef })
 
+    const [isLandscape, setIsLandscape] = useState(window.matchMedia("(orientation: landscape)").matches);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(orientation: landscape)");
+        const handleChange = () => setIsLandscape(mediaQuery.matches);
+
+        mediaQuery.addEventListener("change", handleChange);
+        return () => mediaQuery.removeEventListener("change", handleChange);
+    }, []);
+
+    const landscapeVideo = "/utpVideo.mp4";
+    const portraitVideo = "/utpVideoMobile.mp4";
+
 
     return (
         <div className='Portfolio'>
             <div className='Portfolio__hero'>
                 <div className='Portfolio__hero-video'>
                     <video autoPlay muted playsInline loop>
-                        <source src="/utpVideo.mp4" type="video/mp4" />
+                        <source src={isLandscape ? landscapeVideo : portraitVideo} type="video/mp4" />
                     </video>
                     <div className='Portfolio__hero_scroll free_img'>
                         <div className='Portfolio__hero_scroll_inner'>
