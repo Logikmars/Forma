@@ -106,7 +106,7 @@ export default () => {
                             <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_3 free_img'>
                                 <img src="/img/arrowDown.svg" alt="" />
                             </div>
-                            <div className='Portfolio__hero_scroll_text'>
+                            <div className='Portfolio__hero_scroll_text bowler_fonts'>
                                 SCROLL DOWN
                             </div>
                         </div>

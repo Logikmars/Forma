@@ -23,6 +23,7 @@
         &_scroll {
             width: 100% !important;
             z-index: 999;
+            bottom: 50px;
 
             &_inner {
                 width: 100%;
@@ -67,6 +68,7 @@
             &_text {
                 width: 100%;
                 text-align: center;
+                font-size: 31px;
             }
         }
 
