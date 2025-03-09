@@ -16,7 +16,7 @@
 
     &__accordion {
         width: 100%;
-        min-height: calc(100vh - 72px);
+        // min-height: calc(100vh - 72px);
         background: #000B;
         display: flex;
         align-items: center;
@@ -24,6 +24,7 @@
         justify-content: center;
         flex-wrap: wrap;
         padding-top: 80px;
+        padding-bottom: 80px;
 
         // &-header {
         //     display: flex;

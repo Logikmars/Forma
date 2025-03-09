@@ -81,6 +81,22 @@ export default () => {
                     <video autoPlay muted playsInline loop>
                         <source src="/utpVideo.mp4" type="video/mp4" />
                     </video>
+                    <div className='Portfolio__hero_scroll free_img'>
+                        <div className='Portfolio__hero_scroll_inner'>
+                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_1 free_img'>
+                                <img src="/img/arrowDown.svg" alt="" />
+                            </div>
+                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_2 free_img'>
+                                <img src="/img/arrowDown.svg" alt="" />
+                            </div>
+                            <div className='Portfolio__hero_scroll_anim_el Portfolio__hero_scroll_anim_el_3 free_img'>
+                                <img src="/img/arrowDown.svg" alt="" />
+                            </div>
+                            <div className='Portfolio__hero_scroll_text'>
+                                SCROLL DOWN
+                            </div>
+                        </div>
+                    </div>
                     <div className='Portfolio__hero_dark free_img'>
                         <div className='Portfolio__hero_dark_inner'></div>
                     </div>
@@ -108,41 +124,41 @@ export default () => {
                 <div className='Portfolio__portfolio' ref={containerRef}>
                     <h2 className='bowler_fonts orange Portfolio__portfolio-title'>PORTFOLIO</h2>
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/paws1.mp4"} title={'Trump sundog'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'}/>
-                        <PortfolioItemSmall video={"/videos/paws2.mp4"} title={'NOTAI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'}/>
-                        <PortfolioItemSmall video={"/videos/paws3.mp4"} title={'Porsche contest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'}/>
+                        <PortfolioItemSmall video={"/videos/paws1.mp4"} title={'Trump sundog'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'} />
+                        <PortfolioItemSmall video={"/videos/paws2.mp4"} title={'NOTAI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
+                        <PortfolioItemSmall video={"/videos/paws3.mp4"} title={'Porsche contest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
                     </div>
-                    <PortfolioItemBig video={"/videos/paws.mp4"} title={'PAWS ON SOLANA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Houdini'}/>
+                    <PortfolioItemBig video={"/videos/paws.mp4"} title={'PAWS ON SOLANA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Houdini'} />
 
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/rebalance1.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Cinema4D'} smalltitle2={'Adobe after Effects'}/>
-                        <PortfolioItemSmall video={"/videos/rebalance2.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'}/>
-                        <PortfolioItemSmall video={"/videos/rebalance3.mp4"} title={'BlueWhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'} smalltitle2={'Unreal Engine'}/>
+                        <PortfolioItemSmall video={"/videos/rebalance1.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Cinema4D'} smalltitle2={'Adobe after Effects'} />
+                        <PortfolioItemSmall video={"/videos/rebalance2.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'} />
+                        <PortfolioItemSmall video={"/videos/rebalance3.mp4"} title={'BlueWhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'} smalltitle2={'Unreal Engine'} />
                     </div>
-                    <PortfolioItemBig video={"/videos/rebalance.mp4"} title={'Rebalance'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Adobe after Effects'}/>
+                    <PortfolioItemBig video={"/videos/rebalance.mp4"} title={'Rebalance'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Adobe after Effects'} />
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/soldatiki1.mp4"} title={'NextMate AI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'}/>
-                        <PortfolioItemSmall video={"/videos/soldatiki2.mp4"} title={'NotAi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'EmberGen'} smalltitle3={'ZBrush'}/>
-                        <PortfolioItemSmall video={"/videos/soldatiki3.mp4"} title={'PlanetQuest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'}/>
+                        <PortfolioItemSmall video={"/videos/soldatiki1.mp4"} title={'NextMate AI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
+                        <PortfolioItemSmall video={"/videos/soldatiki2.mp4"} title={'NotAi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'EmberGen'} smalltitle3={'ZBrush'} />
+                        <PortfolioItemSmall video={"/videos/soldatiki3.mp4"} title={'PlanetQuest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
                     </div>
                     <PortfolioItemBig video={"/videos/soldatiki.mp4"} title={'NOTAI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} smalltitle4={'ZBrush'} />
 
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/cheliki1.mp4"} title={'MEMEFI X LINEA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'}/>
-                        <PortfolioItemSmall video={"/videos/cheliki2.mp4"} title={'Memefi stone'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'}/>
-                        <PortfolioItemSmall video={"/videos/cheliki3.mp4"} title={'RTFKT CREATOR'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'}/>
+                        <PortfolioItemSmall video={"/videos/cheliki1.mp4"} title={'MEMEFI X LINEA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
+                        <PortfolioItemSmall video={"/videos/cheliki2.mp4"} title={'Memefi stone'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'} />
+                        <PortfolioItemSmall video={"/videos/cheliki3.mp4"} title={'RTFKT CREATOR'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
                     </div>
-                    <PortfolioItemBig video={"/videos/cheliki.mp4"} title={'MEMEFI CG TRAILER'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'}/>
+                    <PortfolioItemBig video={"/videos/cheliki.mp4"} title={'MEMEFI CG TRAILER'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'} />
                     {/*  */}
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/Polemosnew.mp4"} title={'Polemos'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'}/>
-                        <PortfolioItemSmall video={"/videos/Realgamenew.mp4"} title={'REALGAMES FOR MEMES'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'}/>
-                        <PortfolioItemSmall video={"/videos/Blocknitenew.mp4"} title={'Teaser Blocknite'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'Embergen'}/>
+                        <PortfolioItemSmall video={"/videos/Polemosnew.mp4"} title={'Polemos'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
+                        <PortfolioItemSmall video={"/videos/Realgamenew.mp4"} title={'REALGAMES FOR MEMES'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} />
+                        <PortfolioItemSmall video={"/videos/Blocknitenew.mp4"} title={'Teaser Blocknite'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'Embergen'} />
                     </div>
-                    <PortfolioItemBig video={"/videos/Hipponew.mp4"} title={'Hippo Redesign'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'}/>
+                    <PortfolioItemBig video={"/videos/Hipponew.mp4"} title={'Hippo Redesign'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'} />
 
                 </div>
                 <Trusted />
