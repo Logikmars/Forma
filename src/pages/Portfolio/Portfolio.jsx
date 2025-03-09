@@ -74,18 +74,18 @@ export default () => {
 
     }, { scope: containerRef })
 
-    const [isLandscape, setIsLandscape] = useState(window.matchMedia("(orientation: landscape)").matches);
+    const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(orientation: landscape)");
-        const handleChange = () => setIsLandscape(mediaQuery.matches);
+        const handleResize = () => setIsLandscape(window.innerWidth > window.innerHeight);
 
-        mediaQuery.addEventListener("change", handleChange);
-        return () => mediaQuery.removeEventListener("change", handleChange);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const landscapeVideo = "/utpVideo.mp4";
     const portraitVideo = "/utpVideoMobile.mp4";
+
 
 
     return (
