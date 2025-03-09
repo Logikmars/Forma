@@ -1,0 +1,19 @@
+.TrustedItem{
+    width: calc((700px / 6) - 35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 140px;
+    @media(max-width: 850px){
+        width: calc((500px / 6) - 20px);
+    }
+    &__img{
+        width: 100%;
+    }
+    &__title{
+        font-size: 20px;
+
+    }
+}

@@ -1,0 +1,15 @@
+.PortfolioItemBigDecor{
+    font-size: 30px;
+    padding: 3px;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 1200px){
+        font-size: 15px;
+    }
+    @media(max-width: 500px){
+        font-size: 8px;
+    }
+}

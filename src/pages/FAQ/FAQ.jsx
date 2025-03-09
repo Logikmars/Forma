@@ -33,7 +33,6 @@ export default () => {
                     <FAQItem key={index} question={item.question} answer={item.answer} toggleAccordion={toggleAccordion} openIndex={openIndex} index={index} />
                 ))}
             </div>
-            <Footer />
         </div>
     )
 }

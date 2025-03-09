@@ -2,6 +2,7 @@
     width: calc(33% - 20px);
     display: flex;
     flex-wrap: wrap;
+    background-color: #000;
 
     @media (max-width: 1200px) {
         width: 100%;
@@ -9,7 +10,7 @@
 
     video {
         width: 100%;
-        max-height: 300px;
+        max-height: 210px;
         object-fit: cover;
 
         @media(max-width: 1200px) {
@@ -28,14 +29,14 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 12px;
+        margin-top: 18px;
 
         &-top {
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding-bottom: 8px;
+            align-items: flex-end;
+            padding-bottom: 30px;
 
             @media (max-width: 350px) {
                 flex-wrap: wrap;
@@ -64,5 +65,25 @@
                 font-size: 12px;
             }
         }
+    }
+
+    &_decor{
+        width: 100% !important;
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+        top: 20px;
+        left: 10px;
+        @media(max-width: 500px){
+            top: 15px;
+            left: 5px;
+        }
+    }
+    &__inner{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+        gap: 7px;
     }
 }
