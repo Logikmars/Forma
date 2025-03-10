@@ -11,10 +11,16 @@
     height: 500px;
 
     @media(max-width: 600px) {
-        height: 300px;
+        height: 200px;
     }
 
     &_element {
         pointer-events: none;
+
+        img {
+            @media(max-width: 600px) {
+                max-width: 150px;
+            }
+        }
     }
 }
