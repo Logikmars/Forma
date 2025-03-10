@@ -23,7 +23,11 @@
         &_scroll {
             width: 100% !important;
             z-index: 999;
-            top: 90vh;
+            top: 95vh;
+
+            @media(max-width: 600px) {
+                top: 83vh;
+            }
 
             &_inner {
                 width: 100%;
