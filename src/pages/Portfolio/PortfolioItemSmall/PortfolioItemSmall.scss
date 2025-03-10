@@ -1,12 +1,9 @@
 .PortfolioItemSmall {
-    width: calc(33% - 20px);
     display: flex;
     flex-wrap: wrap;
     background-color: #000;
 
-    @media (max-width: 1200px) {
-        width: 100%;
-    }
+    width: 100%;
 
     video {
         width: 100%;
@@ -67,19 +64,21 @@
         }
     }
 
-    &_decor{
+    &_decor {
         width: 100% !important;
         display: flex;
         justify-content: start;
         align-items: baseline;
         top: 20px;
         left: 10px;
-        @media(max-width: 500px){
+
+        @media(max-width: 500px) {
             top: 15px;
             left: 5px;
         }
     }
-    &__inner{
+
+    &__inner {
         width: 100%;
         display: flex;
         justify-content: start;

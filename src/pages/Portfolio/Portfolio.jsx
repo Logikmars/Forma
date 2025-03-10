@@ -137,41 +137,190 @@ export default () => {
                 <div className='Portfolio__portfolio' ref={containerRef} id='portfolio'>
                     <h2 className='bowler_fonts orange Portfolio__portfolio-title'>PORTFOLIO</h2>
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/paws1.mp4"} title={'Trump sundog'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'} />
-                        <PortfolioItemSmall video={"/videos/paws2.mp4"} title={'NOTAI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
-                        <PortfolioItemSmall video={"/videos/paws3.mp4"} title={'Porsche contest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
+                        <PortfolioItemSmall
+                            video={"/videos/paws1.mp4"}
+                            title={'Sandog X Trump'}
+                            description={'Created a 3D animation for the Sandog x Trump collaboration with detailed modeling and realistic rendering.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'ZBrush'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/paws2.mp4"}
+                            title={'NOTAI: Begin Video'}
+                            description={'First video in a three-part marketing series for NOTAI, setting the project’s visual style with atmospheric effects and dynamic editing.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'EmberGen'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/paws3.mp4"}
+                            title={'Porsche Contest Entry'}
+                            description={'Contest entry for Porsche featuring high-end 3D visuals, dynamic camera work, and a highly detailed car model.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'EmberGen'}
+                        />
                     </div>
-                    <PortfolioItemBig video={"/videos/paws.mp4"} title={'PAWS ON SOLANA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Houdini'} />
-
+                    <PortfolioItemBig
+                        video={"/videos/paws.mp4"}
+                        title={'PAWS ON SOLANA'}
+                        description={'Announcement animation for PAWS on Solana with procedural effects and a unique stylized look.'}
+                        date={'24.03'}
+                        smalltitle={'Unreal Engine'}
+                        smalltitle2={'ZBrush'}
+                        smalltitle3={'Houdini'}
+                    />
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/rebalance1.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Cinema4D'} smalltitle2={'Adobe after Effects'} />
-                        <PortfolioItemSmall video={"/videos/rebalance2.mp4"} title={'Bluewhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'} />
-                        <PortfolioItemSmall video={"/videos/rebalance3.mp4"} title={'BlueWhale'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Adobe after Effects'} smalltitle2={'Unreal Engine'} />
+                        <PortfolioItemSmall
+                            video={"/videos/rebalance1.mp4"}
+                            title={'BlueWhale Announcement'}
+                            description={'Motion design video for the BlueWhale announcement, featuring smooth animations, stylish typography, and seamless transitions.'}
+                            date={'24.03'}
+                            smalltitle={'Cinema 4D'}
+                            smalltitle2={'Adobe After Effects'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/rebalance2.mp4"}
+                            title={'BlueWhale Teaser Trailer'}
+                            description={'A cinematic teaser trailer for BlueWhale, building anticipation with immersive visuals.'}
+                            date={'24.03'}
+                            smalltitle={'Adobe After Effects'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/rebalance3.mp4"}
+                            title={'BlueWhale Trailer'}
+                            description={'Full-length promotional trailer combining real-time rendering with high-end post-production effects.'}
+                            date={'24.03'}
+                            smalltitle={'Adobe After Effects'}
+                            smalltitle2={'Unreal Engine'}
+                        />
                     </div>
-                    <PortfolioItemBig video={"/videos/rebalance.mp4"} title={'Rebalance'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Adobe after Effects'} />
+                    <PortfolioItemBig
+                        video={"/videos/rebalance.mp4"}
+                        title={'Rebalance'}
+                        description={'Promotional video for the Rebalance project with dynamic visuals and engaging motion design.'}
+                        date={'24.03'}
+                        smalltitle={'Unreal Engine'}
+                        smalltitle2={'Adobe After Effects'}
+                    />
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/soldatiki1.mp4"} title={'NextMate AI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} />
-                        <PortfolioItemSmall video={"/videos/soldatiki2.mp4"} title={'NotAi'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'EmberGen'} smalltitle3={'ZBrush'} />
-                        <PortfolioItemSmall video={"/videos/soldatiki3.mp4"} title={'PlanetQuest'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
+                        <PortfolioItemSmall
+                            video={"/videos/soldatiki1.mp4"}
+                            title={'NextMate AI'}
+                            description={'A futuristic cinematic trailer for NextMate.AI, emphasizing AI-driven themes and sleek design.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'EmberGen'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/soldatiki2.mp4"}
+                            title={'NOTAI: Finale'}
+                            description={'Final video in the NOTAI series, wrapping up the visual storytelling with high-quality cinematics.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'EmberGen'}
+                            smalltitle3={'ZBrush'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/soldatiki3.mp4"}
+                            title={'PlanetQuest'}
+                            description={'Fast-paced announcement video for PlanetQuest with stunning space-themed visuals.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                        />
                     </div>
-                    <PortfolioItemBig video={"/videos/soldatiki.mp4"} title={'NOTAI'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'EmberGen'} smalltitle4={'ZBrush'} />
-
+                    <PortfolioItemBig
+                        video={"/videos/soldatiki.mp4"}
+                        title={'NOTAI: Second'}
+                        description={'Second video in the NOTAI series, expanding on the project’s signature visual style.'}
+                        date={'24.03'}
+                        smalltitle={'Unreal Engine'}
+                        smalltitle2={'Maya'}
+                        smalltitle3={'EmberGen'}
+                        smalltitle4={'ZBrush'}
+                    />
 
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/cheliki1.mp4"} title={'MEMEFI X LINEA'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
-                        <PortfolioItemSmall video={"/videos/cheliki2.mp4"} title={'Memefi stone'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'ZBrush'} />
-                        <PortfolioItemSmall video={"/videos/cheliki3.mp4"} title={'RTFKT CREATOR'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
+                        <PortfolioItemSmall
+                            video={"/videos/cheliki1.mp4"}
+                            title={'MEMEFI X LINEA'}
+                            description={'Collaboration video for Memefi x Linea, featuring dynamic motion design and high-quality rendering.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/cheliki2.mp4"}
+                            title={'Memefi Stone Meme Boss'}
+                            description={'CG trailer showcasing a game character from MEMEFI with detailed animation and high-end visuals.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'ZBrush'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/cheliki3.mp4"}
+                            title={'AWARD WINNING RTFKT VIDEO – Takashi Murakami Pill'}
+                            description={'Entry for the RTFKT contest, securing 3rd place with a visually striking digital artwork.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                        />
                     </div>
-                    <PortfolioItemBig video={"/videos/cheliki.mp4"} title={'MEMEFI CG TRAILER'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'} />
-                    {/*  */}
+                    <PortfolioItemBig
+                        video={"/videos/cheliki.mp4"}
+                        title={'MEMEFI CG TRAILER'}
+                        description={'A cinematic CG trailer for MEMEFI, designed to enhance branding with high-quality animation.'}
+                        date={'24.03'}
+                        smalltitle={'Unreal Engine'}
+                        smalltitle2={'ZBrush'}
+                        smalltitle3={'Maya'}
+                    />
+
                     <div className='Portfolio__portfolio-items'>
-                        <PortfolioItemSmall video={"/videos/Polemosnew.mp4"} title={'Polemos'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} />
-                        <PortfolioItemSmall video={"/videos/Realgamenew.mp4"} title={'REALGAMES FOR MEMES'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} />
-                        <PortfolioItemSmall video={"/videos/Blocknitenew.mp4"} title={'Teaser Blocknite'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'Maya'} smalltitle3={'Embergen'} />
+                        <PortfolioItemSmall
+                            video={"/videos/Polemosnew.mp4"}
+                            title={'Polemos'}
+                            description={'High-quality cinematic animation for the Polemos project, showcasing powerful visuals and deep storytelling.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/Realgamenew.mp4"}
+                            title={'REALGAMES FOR MEMES'}
+                            description={'Fun and engaging promotional video for REALGAMES, blending humor with high-end motion design.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                        />
+                        <PortfolioItemSmall
+                            video={"/videos/Blocknitenew.mp4"}
+                            title={'Teaser Blocknite'}
+                            description={'A teaser trailer for Blocknite, featuring a unique stylized approach and high-quality rendering.'}
+                            date={'24.03'}
+                            smalltitle={'Unreal Engine'}
+                            smalltitle2={'Maya'}
+                            smalltitle3={'Embergen'}
+                        />
                     </div>
-                    <PortfolioItemBig video={"/videos/Hipponew.mp4"} title={'Hippo Redesign'} description={'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'} date={'24.03'} smalltitle={'Unreal Engine'} smalltitle2={'ZBrush'} smalltitle3={'Maya'} />
+                    <PortfolioItemBig
+                        video={"/videos/Hipponew.mp4"}
+                        title={'Hippo Redesign'}
+                        description={'A reimagining of the Hippo brand with modern CG visuals and sleek motion design.'}
+                        date={'24.03'}
+                        smalltitle={'Unreal Engine'}
+                        smalltitle2={'ZBrush'}
+                        smalltitle3={'Maya'}
+                    />
+
 
                 </div>
                 <Trusted />
