@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import './PortfolioItemBig.scss';
 import PortfolioItemBigDecor from './PortfolioItemBigDecor/PortfolioItemBigDecor';
-export default ({ video, title, description, date, smalltitle, smalltitle2, smalltitle3, smalltitle4 }) => {
+import { useNavigate } from 'react-router-dom';
 
+export default ({ video, title, description, date, smalltitle, smalltitle2, smalltitle3, smalltitle4, link }) => {
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const nav = useNavigate();
 
+    const handleMouseMove = (e) => {
+        if (!link) return;
+        const rect = e.currentTarget.getBoundingClientRect();
+        setMousePos({
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        });
+    };
+
+    const handleClick = () => {
+        if (link) {
+            nav(`/case/${link}`);
+        }
+    };
 
     return (
         <div className='PortfolioItemBig'>
@@ -11,12 +29,28 @@ export default ({ video, title, description, date, smalltitle, smalltitle2, smal
                     {smalltitle && <PortfolioItemBigDecor title={smalltitle} />}
                     {smalltitle2 && <PortfolioItemBigDecor title={smalltitle2} />}
                     {smalltitle3 && <PortfolioItemBigDecor title={smalltitle3} />}
-                    {smalltitle4 && <PortfolioItemBigDecor title={smalltitle3} />}
+                    {smalltitle4 && <PortfolioItemBigDecor title={smalltitle4} />}
                 </div>
             </div>
-            <video autoPlay muted playsInline loop>
-                <source src={video} type="video/mp4" />
-            </video>
+            <div
+                className='PortfolioItemBig_video'
+                onMouseMove={handleMouseMove}
+                onClick={handleClick}
+                style={{ cursor: link ? 'pointer' : 'default', position: 'relative' }}
+            >
+                <video autoPlay muted playsInline loop>
+                    <source src={video} type="video/mp4" />
+                </video>
+
+                {link && (
+                    <div
+                        className="explore-text bowler_fonts"
+                        style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px`, position: 'absolute' }}
+                    >
+                        Click to explore
+                    </div>
+                )}
+            </div>
             <div className='PortfolioItemBig__info'>
                 <div className='PortfolioItemBig__info-top'>
                     <p className='PortfolioItemBig__info-title bowler_fonts'>{title}</p>
@@ -25,5 +59,5 @@ export default ({ video, title, description, date, smalltitle, smalltitle2, smal
                 <div className='PortfolioItemBig__info-description vogue_fonts'>{description}</div>
             </div>
         </div>
-    )
-}
+    );
+};

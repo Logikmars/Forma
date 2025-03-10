@@ -1,21 +1,24 @@
 .TrustedItem {
-    width: calc((700px / 6) - 35px);
+    width: calc((1000px / 5) - 35px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
-    min-height: 140px;
+    // min-height: 140px;
 
-    @media(max-width: 850px) {
-        width: calc((500px / 6) - 20px);
+    @media(max-width: 400px) {
+        width: calc((850px / 5) - 35px);
     }
 
     &__img {
         width: 100%;
+        max-height: 56px;
+        object-fit: contain;
     }
 
     &__title {
+        margin-top: 10px;
         font-size: 20px;
         text-align: center;
     }

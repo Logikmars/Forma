@@ -3,8 +3,13 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding-right: 12px;
 
-    align-items: flex-start;
+    @media(max-width: 600px) {
+        padding-right: 0px;
+    }
+
+    align-items: center;
 
     @media(max-width: 1000px) {
         flex-wrap: wrap;
@@ -52,7 +57,7 @@
             &-border {
                 justify-content: flex-start !important;
                 align-items: flex-start !important;
-                z-index: -1;
+                // z-index: -1;
                 top: .5px;
             }
 
@@ -83,6 +88,8 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            position: relative;
+            z-index: 1;
 
             &-big {
                 font-size: 50px;
@@ -114,8 +121,10 @@
     &__right {
         width: 65%;
 
-        &-img {
+        video {
             width: 100%;
+            border: 5px solid #CF662F;
+            border-radius: 24px;
         }
 
         @media(max-width: 1000px) {

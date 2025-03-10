@@ -156,6 +156,7 @@ body {
     align-content: space-between;
     justify-content: center;
     overflow: hidden;
+    width: 100%;
 }
 
 
@@ -195,7 +196,7 @@ img {
     scrollbar-color: #CF662F #000;
 }
 
-#root{
+#root {
     display: flex;
     justify-content: center;
 }

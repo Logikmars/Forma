@@ -16,10 +16,10 @@ import { useState } from 'react';
 
 export default () => {
     const portfolioItems = [
-        { number: '01', title: 'cgi', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false },
-        { number: '02', title: 'motion design', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true },
-        { number: '03', title: 'VFX', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(visual effects)', border: false },
-        { number: '04', title: 'GFX DESIGN', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true }
+        { number: '01', title: 'cgi', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false, video: '/cgi.mp4' },
+        { number: '02', title: 'motion design', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true, video: '/motionDesign.mp4' },
+        { number: '03', title: 'VFX', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(visual effects)', border: false, video: '/vfx.mp4' },
+        { number: '04', title: 'GFX DESIGN', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true, video: '/gfx.mp4' }
     ];
 
     const containerRef = useRef(null);
@@ -145,11 +145,12 @@ export default () => {
                             smalltitle={'Unreal Engine'}
                             smalltitle2={'Maya'}
                             smalltitle3={'ZBrush'}
+                            link='SunDogTrump'
                         />
                         <PortfolioItemSmall
                             video={"/videos/paws2.mp4"}
                             title={'NOTAI: Begin Video'}
-                            description={'First video in a three-part marketing series for NOTAI, setting the project’s visual style with atmospheric effects and dynamic editing.'}
+                            description={'First video in a three-part marketing series for NOTAI, setting the project`s visual style with atmospheric effects and dynamic editing.'}
                             date={'24.03'}
                             smalltitle={'Unreal Engine'}
                             smalltitle2={'Maya'}
@@ -183,6 +184,7 @@ export default () => {
                             date={'24.03'}
                             smalltitle={'Cinema 4D'}
                             smalltitle2={'Adobe After Effects'}
+                            link='Bw'
                         />
                         <PortfolioItemSmall
                             video={"/videos/rebalance2.mp4"}
@@ -190,6 +192,7 @@ export default () => {
                             description={'A cinematic teaser trailer for BlueWhale, building anticipation with immersive visuals.'}
                             date={'24.03'}
                             smalltitle={'Adobe After Effects'}
+                            link='Bw'
                         />
                         <PortfolioItemSmall
                             video={"/videos/rebalance3.mp4"}
@@ -198,6 +201,7 @@ export default () => {
                             date={'24.03'}
                             smalltitle={'Adobe After Effects'}
                             smalltitle2={'Unreal Engine'}
+                            link='Bw'
                         />
                     </div>
                     <PortfolioItemBig
@@ -256,6 +260,7 @@ export default () => {
                             date={'24.03'}
                             smalltitle={'Unreal Engine'}
                             smalltitle2={'Maya'}
+                            link='MemefiXLinea'
                         />
                         <PortfolioItemSmall
                             video={"/videos/cheliki2.mp4"}
@@ -268,7 +273,7 @@ export default () => {
                         />
                         <PortfolioItemSmall
                             video={"/videos/cheliki3.mp4"}
-                            title={'AWARD WINNING RTFKT VIDEO – Takashi Murakami Pill'}
+                            title={'AWARD WINNING RTFKT VIDEO - Takashi Murakami Pill'}
                             description={'Entry for the RTFKT contest, securing 3rd place with a visually striking digital artwork.'}
                             date={'24.03'}
                             smalltitle={'Unreal Engine'}
@@ -283,6 +288,7 @@ export default () => {
                         smalltitle={'Unreal Engine'}
                         smalltitle2={'ZBrush'}
                         smalltitle3={'Maya'}
+                        link='MemefiCG'
                     />
 
                     <div className='Portfolio__portfolio-items'>
@@ -309,6 +315,7 @@ export default () => {
                             smalltitle={'Unreal Engine'}
                             smalltitle2={'Maya'}
                             smalltitle3={'Embergen'}
+                            link='Blocknite'
                         />
                     </div>
                     <PortfolioItemBig
@@ -319,12 +326,13 @@ export default () => {
                         smalltitle={'Unreal Engine'}
                         smalltitle2={'ZBrush'}
                         smalltitle3={'Maya'}
+                        link='Hippo'
                     />
 
 
                 </div>
                 <Trusted />
-                {/* <div className='Portfolio__services'>
+                <div className='Portfolio__services'>
                     <h2 className='Portfolio__services-title bowler_fonts'>Our <span className='bowler_fonts orange'>services</span></h2>
                     <div className='Portfolio__services-items'>
                         {portfolioItems.map((item, index) => (
@@ -336,12 +344,12 @@ export default () => {
                                 img={item.img}
                                 subtitle={item.subtitle}
                                 border={item.border}
+                                video={item.video}
                             />
                         ))}
                     </div>
-                </div> */}
+                </div>
                 <FAQ />
-                <Footer />
             </div>
 
         </div>

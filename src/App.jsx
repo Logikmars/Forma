@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Footer from './components/Footer/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,10 +26,11 @@ function App() {
         <Loader showLoader={showLoader} setshowLoader={setshowLoader} />
         <Routes>
           <Route path="/" element={<Portfolio />} />
-          <Route path="/FAQ" element={<FAQ />} />
           <Route path="/case/:caseName" element={<Case />} />
         </Routes>
+        <Footer />
       </div>
+
     </BrowserRouter>
 
   );

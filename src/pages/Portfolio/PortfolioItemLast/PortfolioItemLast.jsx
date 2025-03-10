@@ -1,6 +1,6 @@
 import './PortfolioItemLast.scss';
 
-export default ({ number, title, description, img, subtitle, border }) => {
+export default ({ number, title, description, img, subtitle, border, video }) => {
     return (
         <div className='PortfolioItemLast'>
             <div className='PortfolioItemLast__left'>
@@ -26,7 +26,11 @@ export default ({ number, title, description, img, subtitle, border }) => {
                 </div>
             </div>
             <div className='PortfolioItemLast__right'>
-                <img src={img} alt="" className='PortfolioItemLast__right-img' />
+
+                <video autoPlay muted playsInline loop>
+                    <source src={video} type="video/mp4" />
+                </video>
+                {/* <img src={img} alt="" className='PortfolioItemLast__right-img' /> */}
             </div>
         </div>
     )

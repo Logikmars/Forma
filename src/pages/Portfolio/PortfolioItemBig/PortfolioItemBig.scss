@@ -25,6 +25,32 @@
         }
     }
 
+
+
+    &_video {
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+
+        .explore-text {
+            position: absolute;
+            pointer-events: none;
+            white-space: nowrap;
+            font-size: 14px;
+            color: white;
+            background: #CF662F;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.2s ease;
+            opacity: 0;
+        }
+
+        &:hover .explore-text {
+            opacity: 1;
+        }
+    }
+
     &__info {
         width: 100%;
         display: flex;
@@ -103,6 +129,8 @@
         align-items: baseline;
         top: 30px;
         left: 10px;
+        z-index: 9;
+        pointer-events: none;
 
         @media(max-width: 500px) {
             top: 15px;
