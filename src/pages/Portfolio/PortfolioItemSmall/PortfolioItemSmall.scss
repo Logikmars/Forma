@@ -32,8 +32,8 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            padding-bottom: 30px;
+            align-items: start;
+            padding-bottom: 10px;
 
             @media (max-width: 350px) {
                 flex-wrap: wrap;
@@ -42,9 +42,11 @@
 
         &-title {
             font-size: 34px;
+            min-height: 80px;
 
             @media (max-width: 760px) {
                 font-size: 28px;
+                min-height: 50px;
             }
         }
 
@@ -57,6 +59,8 @@
 
         &-description {
             font-size: 20px;
+            text-align: left;
+            width: 100%;
 
             @media (max-width: 620px) {
                 font-size: 12px;

@@ -6,29 +6,51 @@ const elementsCount = 10;
 export default function FaqDecor() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
+    const isTouchScreen = useRef(false);
 
     useEffect(() => {
+        // Определяем, есть ли тачскрин
+        const detectTouchScreen = () => {
+            isTouchScreen.current = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        };
+        detectTouchScreen();
+
         const handleMouseMove = (e) => {
+            if (isTouchScreen.current) return; // Игнорируем на тачскрине
+
             if (containerRef.current) {
                 const rect = containerRef.current.getBoundingClientRect();
 
                 let x = e.clientX - rect.left;
                 let y = e.clientY - rect.top;
 
-                // Ограничиваем координаты, если мышка выходит за пределы контейнера
-                if (x < 0) x = 0;
-                if (y < 0) y = 0;
-                if (x > rect.width) x = rect.width;
-                if (y > rect.height) y = rect.height;
+                // Ограничиваем координаты в пределах контейнера
+                x = Math.max(0, Math.min(x, rect.width));
+                y = Math.max(0, Math.min(y, rect.height));
 
                 setPosition({ x, y });
             }
         };
 
-        window.addEventListener("mousemove", handleMouseMove);
+        const handleMouseLeave = () => {
+            if (containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                setPosition({ x: rect.width / 2, y: rect.height / 2 }); // Возвращаем в центр
+            }
+        };
+
+
+        const container = containerRef.current;
+        if (container) {
+            container.addEventListener("mousemove", handleMouseMove);
+            container.addEventListener("mouseleave", handleMouseLeave);
+        }
 
         return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
+            if (container) {
+                container.removeEventListener("mousemove", handleMouseMove);
+                container.removeEventListener("mouseleave", handleMouseLeave);
+            }
         };
     }, []);
 
@@ -40,7 +62,7 @@ export default function FaqDecor() {
                     className='FaqDecor_element free_img'
                     style={{
                         transform: `translate(${position.x}px, ${position.y}px)`,
-                        transition: `transform ${(elementsCount - index) * 20}ms`,
+                        transition: `transform ${(elementsCount - index) * 20}ms ease-out`,
                     }}
                 >
                     <img src="/img/faqDecorElement.svg" alt="" />

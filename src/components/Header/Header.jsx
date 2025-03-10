@@ -21,7 +21,7 @@ export default () => {
                     <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     {/* <Link to="/about" className='bowler_fonts Header__nav-item'> Our sevices</Link> */}
                     {/* <p className='bowler_fonts Header__nav-item'>/</p> */}
-                    <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
+
                     <a href='#FAQ' className='bowler_fonts Header__nav-item'>FAQ</a>
                     <p className='bowler_fonts Header__nav-item Header__nav-item_separator'>/</p>
                     <a href="#socials" className='bowler_fonts Header__nav-item'>SOCIALS</a>
@@ -39,7 +39,6 @@ export default () => {
                     <p className='bowler_fonts Header__nav-item'>/</p>
                     {/* <Link to="/about" className='bowler_fonts Header__nav-item'> Our sevices</Link> */}
                     {/* <p className='bowler_fonts Header__nav-item'>/</p> */}
-                    <p className='bowler_fonts Header__nav-item'>/</p>
                     <Link to="/faq" className='bowler_fonts Header__nav-item'>FAQ</Link>
                     <p className='bowler_fonts Header__nav-item'>/</p>
                     <a href="#socials" className='bowler_fonts Header__nav-item'>SOCIALS</a>
