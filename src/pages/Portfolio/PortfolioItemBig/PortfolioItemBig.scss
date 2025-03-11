@@ -44,6 +44,10 @@
             transform: translate(-50%, -50%);
             transition: opacity 0.2s ease;
             opacity: 0;
+
+            @media (hover: none) and (pointer: coarse) {
+                display: none;
+            }
         }
 
         &:hover .explore-text {

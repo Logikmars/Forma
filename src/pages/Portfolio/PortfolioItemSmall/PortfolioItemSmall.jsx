@@ -1,10 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './PortfolioItemSmall.scss';
 import PortfolioItemSmallDecor from './PortfolioItemSmallDecor/PortfolioItemSmallDecor';
 import { useNavigate } from 'react-router-dom';
 
 export default ({ video, title, description, date, smalltitle, smalltitle2, smalltitle3, link }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const videoRef = useRef(null);
+    const nav = useNavigate();
+
+    const [hasBeenVisible, setHasBeenVisible] = useState(false);
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setHasBeenVisible(true);
+            }
+        }, { threshold: 0.5 });
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
+    }, []);
 
     const handleMouseMove = (e) => {
         if (!link) return;
@@ -15,11 +36,9 @@ export default ({ video, title, description, date, smalltitle, smalltitle2, smal
         });
     };
 
-    const nav = useNavigate();
-
     const handleClick = () => {
         if (link) {
-            nav(`/case/${link}`)
+            nav(`/case/${link}`);
         }
     };
 
@@ -37,14 +56,16 @@ export default ({ video, title, description, date, smalltitle, smalltitle2, smal
                 onMouseMove={handleMouseMove}
                 onClick={handleClick}
                 style={{ cursor: link ? 'pointer' : 'default' }}
+                ref={videoRef}
             >
-                <video autoPlay muted playsInline loop>
-                    <source src={video} type="video/mp4" />
-                </video>
-
+                {hasBeenVisible && (
+                    <video autoPlay muted playsInline loop>
+                        <source src={video} type='video/mp4' />
+                    </video>
+                )}
                 {link && (
                     <div
-                        className="explore-text bowler_fonts"
+                        className='explore-text bowler_fonts'
                         style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}
                     >
                         Click to explore
