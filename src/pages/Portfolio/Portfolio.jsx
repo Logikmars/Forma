@@ -16,10 +16,10 @@ import { useState } from 'react';
 
 export default () => {
     const portfolioItems = [
-        { number: '01', title: 'cgi', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false, video: '/cgi.mp4' },
-        { number: '02', title: 'motion design', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true, video: '/motionDesign.mp4' },
-        { number: '03', title: 'VFX', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '(visual effects)', border: false, video: '/vfx.mp4' },
-        { number: '04', title: 'GFX DESIGN', description: 'Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', img: '/img/services.png', subtitle: '', border: true, video: '/gfx.mp4' }
+        { number: '01', title: 'CGI', description: 'CGI is digital graphics and animation created by computers. It’s used for realistic visual effects, 3D models, and animations in films, advertising, and games.', img: '/img/services.png', subtitle: '(Computer-Generated Imagery)', border: false, video: '/cgi.mp4' },
+        { number: '02', title: 'Motion Design', description: 'Motion Design is animated graphic design that brings visuals to life through movement. It’s used in advertising, interfaces, presentations, and videos to create engaging storytelling.', img: '/img/services.png', subtitle: '', border: true, video: '/motionDesign.mp4' },
+        { number: '03', title: 'VFX (Visual Effects)', description: 'VFX (Visual Effects) are digital effects that enhance or modify visuals in videos. They are used in films, advertising, and games to create realistic or fantastical scenes.', img: '/img/services.png', subtitle: '(visual effects)', border: false, video: '/vfx.mp4' },
+        { number: '04', title: 'GFX Design', description: 'GFX Design (Graphic Design) is the creation of visual content for brands, advertising, and media. It involves working with images, typography, and composition to convey ideas and emotions.', img: '/img/services.png', subtitle: '', border: true, video: '/gfx.mp4' }
     ];
 
     const containerRef = useRef(null);
@@ -174,6 +174,7 @@ export default () => {
                         smalltitle={'Unreal Engine'}
                         smalltitle2={'ZBrush'}
                         smalltitle3={'Houdini'}
+                        link={'PAWS'}
                     />
 
                     <div className='Portfolio__portfolio-items'>

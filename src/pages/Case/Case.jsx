@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import './Case.scss';
+import { useEffect } from 'react';
 
 const cases = {
     'Blocknite': {
@@ -56,6 +57,11 @@ const cases = {
 export default () => {
 
     const { caseName } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
 
     return (
         <div className='Case'>

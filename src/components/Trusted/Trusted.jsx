@@ -1,5 +1,22 @@
 import './Trusted.scss';
 import TrustedItem from './TrustedItem/TrustedItem';
+
+const items = [
+    'LEDGER',
+    'LINEA',
+    'PAWS',
+    'LUMIA',
+    'NOTAI',
+    'MEMEFI',
+    '$SUNDOG',
+    'RTFKT',
+    '$HIPPO',
+    'LEDGER'
+]
+
+const itemsArray = [...items, ...items, ...items, ...items, ...items]
+
+
 export default () => {
     return (
         <div className='Trusted'>
@@ -7,17 +24,19 @@ export default () => {
                 <h2 className='Trusted__title_text bowler_fonts'>trusted <span className='orange bowler_fonts'>by</span></h2>
                 <span className='Trusted__title_line'></span>
             </div>
-            <div className='Trusted__items'>
-                <TrustedItem img={'/trustedBy/0.webp'} title={'LEDGER'} />
-                <TrustedItem img={'/trustedBy/1.webp'} title={'LINEA'} />
-                <TrustedItem img={'/trustedBy/2.webp'} title={'PAWS'} />
-                <TrustedItem img={'/trustedBy/3.webp'} title={'LUMIA'} />
-                <TrustedItem img={'/trustedBy/4.webp'} title={'NOTAI'} />
-                <TrustedItem img={'/trustedBy/5.webp'} title={'MEMEFI'} />
-                <TrustedItem img={'/trustedBy/6.webp'} title={'$SUNDOG'} />
-                <TrustedItem img={'/trustedBy/7.webp'} title={'RTFKT'} />
-                <TrustedItem img={'/trustedBy/8.webp'} title={'$HIPPO'} />
-                <TrustedItem img={'/trustedBy/9.webp'} title={'LEDGER'} />
+            <div className='Trusted__row Trusted__row_1'>
+                {
+                    itemsArray.map((item, index) => {
+                        return <TrustedItem img={`/trustedBy/${index % items.length}.webp`} title={item} />
+                    })
+                }
+            </div>
+            <div className='Trusted__row Trusted__row_2'>
+                {
+                    itemsArray.map((item, index) => {
+                        return <TrustedItem img={`/trustedBy/${index % items.length}.webp`} title={item} />
+                    })
+                }
             </div>
         </div>
     )

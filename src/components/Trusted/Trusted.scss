@@ -10,6 +10,39 @@
     box-shadow: 0px 50px 50px #000;
     gap: 77px;
 
+    &__row {
+        display: flex;
+
+        // width: 1500px;
+        &_1 {
+            animation: runRow1 30s infinite linear;
+
+            @keyframes runRow1 {
+                0% {
+                    transform: translate(0px, 0px);
+                }
+
+                100% {
+                    transform: translate(-1500px, 0px);
+                }
+            }
+        }
+
+        &_2 {
+            animation: runRow2 30s infinite linear;
+
+            @keyframes runRow2 {
+                0% {
+                    transform: translate(-1500px, 0px);
+                }
+
+                100% {
+                    transform: translate(0px, 0px);
+                }
+            }
+        }
+    }
+
     &__title {
         width: 100%;
         display: flex;
