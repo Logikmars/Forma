@@ -49,8 +49,8 @@ const cases = {
     'SunDogTrump': {
         imagesCount: 3,
         video: '/videos/paws1.mp4',
-        title: 'Sandog X Trump',
-        desc: 'Created a 3D animation for the Sandog x Trump collaboration with detailed modeling and realistic rendering.'
+        title: 'Sundog X Trump',
+        desc: 'Created a 3D animation for the Sundog x Trump collaboration with detailed modeling and realistic rendering.'
     }
 }
 

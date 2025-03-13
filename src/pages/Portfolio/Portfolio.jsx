@@ -139,8 +139,8 @@ export default () => {
                     <div className='Portfolio__portfolio-items'>
                         <PortfolioItemSmall
                             video={"/videos/paws1.mp4"}
-                            title={'Sandog X Trump'}
-                            description={'Created a 3D animation for the Sandog x Trump collaboration with detailed modeling and realistic rendering.'}
+                            title={'Sundog X Trump'}
+                            description={'Created a 3D animation for the Sundog x Trump collaboration with detailed modeling and realistic rendering.'}
                             date={'24.03'}
                             smalltitle={'Unreal Engine'}
                             smalltitle2={'Maya'}
