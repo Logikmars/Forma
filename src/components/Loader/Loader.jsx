@@ -48,42 +48,49 @@ export default ({ showLoader, setshowLoader }) => {
 
 
     return (
-        <div className={`Loader ${!showLoader && 'Loader_hide'}`} onClick={() => {
-            if (canStop) {
-                setstartHide(true)
-            }
-        }}>
-            <div className='Loader_bg free_img'>
-                <div className='Loader_bg_inner'></div>
-            </div>
-
-            <div className={`Loader_content  ${canStop && 'Loader_canStop'} free_img`}>
-                <video ref={videoRef} key={videoSrc} autoPlay muted playsInline >
-                    <source src={videoSrc} type="video/mp4" />
-                </video>
-            </div>
-
-            <div className='Loader_button free_img' style={{
-                opacity: canStop ? 1 : 0,
-                transform: `scale(${startHide ? 50 : 1})`
+        <>
+            <div className={`Loader ${!showLoader && 'Loader_hide'}`} onClick={() => {
+                if (canStop) {
+                    setstartHide(true)
+                }
             }}>
-                <div className='Loader_button_wrapper_1'>
-                    <div className='Loader_button_wrapper_2'>
-                        <div className='Loader_button_wrapper_3 bowler_fonts'>
-                            START
+                <div className='Loader_bg free_img'>
+                    <div className='Loader_bg_inner'></div>
+                </div>
+
+                <div className={`Loader_content  ${canStop && 'Loader_canStop'} free_img`}>
+                    <video ref={videoRef} key={videoSrc} autoPlay muted playsInline >
+                        <source src={videoSrc} type="video/mp4" />
+                    </video>
+                </div>
+
+                <div className='Loader_button free_img' style={{
+                    opacity: canStop ? 1 : 0,
+                    transform: `scale(${startHide ? 50 : 1})`
+                }}>
+                    <div className='Loader_button_wrapper_1'>
+                        <div className='Loader_button_wrapper_2'>
+                            <div className='Loader_button_wrapper_3 bowler_fonts'>
+                                START
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {/* <div className={`Loader_content Loader_content_2 free_img`} style={{
+                {/* <div className={`Loader_content Loader_content_2 free_img`} style={{
                 opacity: startHide ? 1 : 0
             }}>
                 <video ref={videoRef2} muted playsInline >
                     <source src="/loaderEnd.mp4" type="video/mp4" />
                 </video>
             </div> */}
+            </div>
 
-        </div>
+            <div className={`Loader_skip ${!showLoader && 'Loader_hide'}`} onClick={() => {
+                setstartHide(true)
+            }}>
+                Skip
+            </div>
+        </>
     )
 }

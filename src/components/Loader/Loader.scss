@@ -24,8 +24,8 @@
     }
 
     &_hide {
-        opacity: 0;
-        pointer-events: none;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     &_content {
@@ -91,6 +91,26 @@
             }
 
 
+        }
+    }
+
+    &_skip {
+        z-index: 9999999;
+        position: fixed;
+        top: 90vh;
+        left: 80vw;
+        color: white;
+        font-weight: 600;
+        font-family: 'Montserrat';
+        opacity: .3;
+        border: 1px solid white;
+        padding: 16px 30px;
+        cursor: pointer;
+        font-family: "Bowler";
+        transition: opacity 300ms;
+
+        &:hover {
+            opacity: 1;
         }
     }
 }
